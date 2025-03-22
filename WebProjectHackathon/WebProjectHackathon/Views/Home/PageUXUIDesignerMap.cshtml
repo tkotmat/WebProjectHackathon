@@ -1,14 +1,66 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UI/UX- дизайнер</title>
+    <link rel="stylesheet" href="~/css/profession4.css">
 </head>
-<body>
-    <h1>@ViewData["Title"]</h1>
 
-    <!-- Кнопка для перехода на страницу Privacy -->
-    <button onclick="window.location.href='@Url.Action("PageHRMap", "Home")'">Перейти на Privacy</button>
+<body>
+
+    <header>
+        <a href="index.html" button class="back-button">Назад </a></button>
+        <h1 class="title">Шлях UI/UX- дизайнера</h1>
+        <button class="submit-button">Відправити заявку на консультацію</button>
+    </header>
+
+    <div class="roadmap-container">
+
+        <div class="step-container">
+            <div class="step" onclick="toggleSelect(this)">Вивчення теорії</div>
+            <div class="step-description">Менеджмент, психологія, HR-курси</div>
+        </div>
+
+        <div class="step-container">
+            <div class="step-description">LinkedIn, Work.ua, Djinni, ATS-системи (Workable, Greenhouse)</div>
+            <div class="step" onclick="toggleSelect(this)">Освоєння HR-інструментів</div>
+
+        </div>
+
+        <div class="step-container">
+            <div class="step-description">
+                Проведення співбесід
+                <br>
+                Робота з конфліктами
+            </div>
+            <div class="step" onclick="toggleSelect(this)">Розвиток комунікаційних навичок</div>
+
+
+        </div>
+
+        <div class="step-container">
+
+            <div class="step-description">Оформлення документів</div>
+            <div class="step" onclick="toggleSelect(this)">Знання трудового законодавства</div>
+        </div>
+        <div class="step-container">
+            <div class="step-description">Стажування у HR-відділі</div>
+            <div class="step" onclick="toggleSelect(this)">Практика та працевлаштування</div>
+
+
+        </div>
+    </div>
+
+
+
+    <script>
+        function toggleSelect(element) {
+            element.classList.toggle("selected");
+        }
+    </script>
+
 </body>
+
 </html>

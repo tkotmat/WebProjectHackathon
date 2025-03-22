@@ -9,62 +9,100 @@
 </head>
 
 <body>
-
     <header>
         <h1>Miracle Jobs</h1>
         <nav>
-            <a href="index.html">Главная</a>
-            <a href="#contacts">Контакты</a>
+            <a href="index.html">Головна</a>
+            <a href="#contacts">Контакти</a>
         </nav>
     </header>
 
     <main>
-        <h2 class="title">Найди свою профессию в IT</h2>
+        <h2 class="title">Знайди свою професію в ІТ</h2>
 
         <section class="professions">
             <div class="profession">
-                <img src="frontend.png" alt="Frontend Developer">
+                <img src="/png/front.jpg" alt="Frontend Developer">
                 <div class="info">
-                    <h3>Frontend-разработчик</h3>
-                    <p>Создаёт внешний интерфейс сайтов и веб-приложений.</p>
+                    <h3 class="profession-title">Frontend-разработчик</h3>
+                    <br>
+                    <p>
+                        Створює зовнішній інтерфейс сайтів та веб-додатків. Відповідає за вигляд, інтерактивність та
+                        коректну роботу веб-сторінок на різних пристроях. Використовує HTML, CSS, JavaScript та сучасні
+                        фреймворки.
+                    </p>
                 </div>
-                <a href='@Url.Action("PageFrontEndMap", "Home")' class="btn">Путь к профессии</a>
+                <a href='@Url.Action("PageFrontEndMap", "Home")' class="btn">Шлях до професії</a>
             </div>
 
             <div class="profession">
-                <img src="backend.png" alt="Backend Developer">
+                <img src="~/png/back.png" alt="Backend Developer">
                 <div class="info">
-                    <h3>Backend-разработчик</h3>
-                    <p>Отвечает за серверную часть приложения.</p>
+                    <h3 class="profession-title">Backend-розробник</h3>
+                    <br>
+                    <p>
+                        Розробляє логіку роботи сервера, баз даних та API, які забезпечують функціонування сайту. Працює
+                        з мовами програмування, такими як Python, PHP, Java, та базами даних MySQL або PostgreSQL.
+                    </p>
                 </div>
-                <a href="backend.html" class="btn">Путь к профессии</a>
+                <a href='@Url.Action("PageBackEndMap", "Home")' class="btn">Шлях до професії</a>
             </div>
 
             <div class="profession">
-                <img src="hr.png" alt="HR Manager">
+                <img src="/png/HR.jpg" alt="HR Manager">
                 <div class="info">
-                    <h3>HR-менеджер</h3>
-                    <p>Помогает находить и адаптировать сотрудников.</p>
+
+                    <h3 class="profession-title">HR-менеджер</h3>
+                    <br>
+                    <p>
+                        Шукає та адаптує нових спеціалістів, створює комфортну атмосферу у команді, проводить співбесіди
+                        та допомагає з розвитком персоналу. Відповідає за побудову сильної корпоративної культури.
+                    </p>
                 </div>
-                <a href="hr.html" class="btn">Путь к профессии</a>
+                <a href='@Url.Action("PageHRMap", "Home")' class="btn">Шлях до професії</a>
             </div>
 
             <div class="profession">
-                <img src="uxui.png" alt="UX/UI Designer">
+                <img src="/png/UI.jpg" alt="UX/UI Designer">
                 <div class="info">
-                    <h3>UX/UI Дизайнер</h3>
-                    <p>Создаёт удобные и красивые интерфейсы.</p>
+                    <h3 class="profession-title">UX/UI Дизайнер</h3>
+                    <br>
+                    <p>
+                        Проектує інтерфейси, роблячи їх зручними, доступними та привабливими для користувачів.
+                        Використовує інструменти дизайну, такі як Figma, Adobe XD, та аналізує поведінку користувачів
+                        для покращення взаємодії.
+                    </p>
                 </div>
-                <a href="uxui.html" class="btn">Путь к профессии</a>
+                <a href='@Url.Action("PageUXUIDesignerMap", "Home")' class="btn">Шлях до професії</a>
             </div>
         </section>
     </main>
 
     <footer id="contacts">
-        <p>Разработано командой Miracle Jobs</p>
-        <p>Контакты: email@example.com</p>
-    </footer>
+        <div class="footer-container">
+            <p class="team"><b>Розроблено командою Miracle Jobs</b></p>
 
+            <div class="developers">
+                <div class="backend">
+                    <p class="backend-title">Backend-розробники:</p>
+                    <div class="backend-names">
+                        <p>Глухинський Б.Б.</p>
+                        <p>Цуран В.І.</p>
+                    </div>
+                </div>
+
+                <div class="frontend">
+                    <p class="frontend-title">Frontend-розробники:</p>
+                    <div class="frontend-names">
+                        <p>Іваненко О.О.</p>
+                        <p>Петренко М.М.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="contacts"><b>Контакти:</b> email@example.com</p>
+        </div>
+    </footer>
 </body>
 
 </html>

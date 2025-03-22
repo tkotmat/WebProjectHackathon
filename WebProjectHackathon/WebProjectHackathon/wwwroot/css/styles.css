@@ -6,27 +6,25 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #e0f7fa, #d0f2e7);
-    color: #333;
+    background: #121212;
+    color: #fff;
     text-align: center;
 }
 
 header {
-    background: rgba(0, 150, 136, 0.8);
-    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-
-    header h1 {
-        color: white;
-    }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
     transition: 0.3s;
 }
 
@@ -35,60 +33,97 @@ nav a {
     }
 
 .title {
-    margin: 30px 0;
-    font-size: 28px;
+    margin: 40px 0;
+    font-size: 32px;
 }
 
 .professions {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .profession {
-    background: white;
-    width: 70%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
     transition: 0.3s;
 }
 
     .profession:hover {
-        transform: scale(1.03);
+        transform: scale(1.05);
     }
 
     .profession img {
-        width: 80px;
+        width: 120px;
     }
 
 .info {
     text-align: left;
     flex: 1;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
 .btn {
-    background: #009688;
-    color: white;
-    padding: 10px 20px;
+    background: rgba(0, 255, 200, 0.8);
+    color: #121212;
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: 0.3s;
 }
 
     .btn:hover {
-        background: #00796B;
+        background: rgba(0, 255, 200, 1);
         transform: scale(1.1);
     }
 
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    background: #004D40;
-    color: white;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin: 50px 0px 40px 15px;
+    margin-left: 150px;
+}
+
+/* Контейнер для двох колонок */
+.developers {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    /* Відступ між колонками */
+}
+
+/* Оформлення колонок */
+.backend,
+.frontend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Заголовки */
+.backend-title,
+.frontend-title {
+    font-weight: bold;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+/* Прізвища у стовпчик */
+.backend-names,
+.frontend-names {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }

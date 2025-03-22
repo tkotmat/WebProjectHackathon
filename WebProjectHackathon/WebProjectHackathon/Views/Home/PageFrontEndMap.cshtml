@@ -1,140 +1,69 @@
 ﻿<!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend-разработчик</title>
+    <title>Frontend- розробника</title>
     <link rel="stylesheet" href="~/css/profession.css">
-    <link rel="stylesheet" href="~/css/СSS.css">
+
 </head>
 
 <body>
-
     <header>
-        <a href="index.html" class="back">← Назад</a>
-        <h1>Frontend-разработчик</h1>
+        <a href="index.html" button class="back-button">Назад </a></button>
+        <h1 class="title">Шлях Frontend- розробника</h1>
+        <button class="submit-button">Відправити заявку на консультацію</button>
     </header>
 
-    <main>
-        <section class="roadmap">
-            <h2>Путь к профессии</h2>
-            <div class="roadmap-container">
-                <svg class="lines" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div class="roadmap-container">
 
-                <div class="step" id="step1" data-desc="HTML, CSS, JavaScript – основные технологии">
-                    Выучить языки
-                    <button id="toggleButton1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; border: none; background: transparent; cursor: pointer;">
-                        Невидимая кнопка
-                    </button>
-                </div>
-                <div class="step" id="step2" data-desc="Создать аккаунт, изучить основные команды">
-                    Настроить GitHub
-                    <button id="toggleButton2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; border: none; background: transparent; cursor: pointer;">
-                        Невидимая кнопка
-                    </button>
-                </div>
-                <div class="step" id="step3" data-desc="Разработать несколько проектов для портфолио">
-                    Сделать проекты
-                    <button id="toggleButton3" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; border: none; background: transparent; cursor: pointer;">
-                        Невидимая кнопка
-                    </button>
-                </div>
-                <div class="step" id="step4" data-desc="Освоить основы фреймворков (React, Vue)">
-                    Изучить фреймворки
-                    <button id="toggleButton4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; border: none; background: transparent; cursor: pointer;">
-                        Невидимая кнопка
-                    </button>
-                </div>
-                <div class="step" id="step5" data-desc="Пройти стажировку или сделать пет-проекты">
-                    Получить опыт
-                    <button id="toggleButton5" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; border: none; background: transparent; cursor: pointer;">
-                        Невидимая кнопка
-                    </button>
-                </div>
+        <div class="step-container">
+            <div class="step-description">Основи HTML, CSS, JavaScript. Розуміння структури веб-сторінок.</div>
+
+
+            <div class="step" onclick="toggleSelect(this)">
+                Вивчити основи
+                <br> веб-розробки
             </div>
-        </section>
+        </div>
 
-        <button class="submit">Отправить заявку</button>
-        <p class="message"></p>
-    </main>
+        <div class="step-container">
+            <div class="step-description">React, Vue або Angular. Компонентний підхід, SPA, state management.</div>
+            <div class="step" onclick="toggleSelect(this)">Освоїти сучасні фреймворки та бібліотеки</div>
 
-    <div id="sidePanel" class="side-panel">
-        <p>Це панель з інформацією!</p>
-        <button class="center-button">Кнопка внизу</button>
+        </div>
+
+        <div class="step-container">
+            <div class="step-description">Chrome DevTools, Postman, Git, Webpack. Налагодження та оптимізація.</div>
+            <div class="step" onclick="toggleSelect(this)">Вивчити інструменти розробника</div>
+        </div>
+
+        <div class="step-container">
+            <div class="step-description">REST API, GraphQL. Запити до серверів, обробка JSON.</div>
+            <div class="step" onclick="toggleSelect(this)">Робота з API</div>
+
+        </div>
+
+        <div class="step-container">
+            <div class="step-description">Верстка проектів, хостинг, підключення реальних API.</div>
+            <div class="step" onclick="toggleSelect(this)">Створити портфоліо</div>
+        </div>
+
+        <div class="step-container">
+            <div class="step-description">Фріланс, стажування, open-source проекти. Робота в команді.</div>
+            <div class="step" onclick="toggleSelect(this)">Отримати перший комерційний досвід</div>
+
+        </div>
+
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const steps = document.querySelectorAll(".step");
-            const svg = document.querySelector(".lines");
-
-            const positions = {
-                step1: { x: "20%", y: "10%" },
-                step2: { x: "70%", y: "20%" },
-                step3: { x: "15%", y: "50%" },
-                step4: { x: "65%", y: "60%" },
-                step5: { x: "40%", y: "90%" }
-            };
-
-            steps.forEach(step => {
-                const id = step.id;
-                step.style.left = positions[id].x;
-                step.style.top = positions[id].y;
-            });
-
-            function createLine(from, to) {
-                const x1 = parseFloat(positions[from].x);
-                const y1 = parseFloat(positions[from].y);
-                const x2 = parseFloat(positions[to].x);
-                const y2 = parseFloat(positions[to].y);
-
-                const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-                line.setAttribute("x1", `${x1}%`);
-                line.setAttribute("y1", `${y1}%`);
-                line.setAttribute("x2", `${x2}%`);
-                line.setAttribute("y2", `${y2}%`);
-                line.setAttribute("stroke", "#4CAF50");
-                line.setAttribute("stroke-width", "3");
-                line.setAttribute("stroke-dasharray", "6, 6");
-                svg.appendChild(line);
-            }
-
-            createLine("step1", "step2");
-            createLine("step2", "step4");
-            createLine("step1", "step3");
-            createLine("step3", "step5");
-            createLine("step4", "step5");
-        });
-    </script>
-    <script>
-        const toggleButtons = ['toggleButton1', 'toggleButton2', 'toggleButton3', 'toggleButton4', 'toggleButton5'];
-        const sidePanel = document.getElementById('sidePanel');
-        let lastOpenedButton = null; // Переменная для отслеживания последней открытой кнопки
-
-        toggleButtons.forEach(buttonId => {
-          const button = document.getElementById(buttonId);
-          button.addEventListener('click', () => {
-            // Если панель открыта и нажата та же кнопка
-            if (sidePanel.classList.contains('open') && lastOpenedButton === buttonId) {
-              sidePanel.classList.remove('open'); // Закрываем панель
-            }
-            // Если панель открыта и нажата другая кнопка
-            else if (sidePanel.classList.contains('open') && lastOpenedButton !== buttonId) {
-              sidePanel.classList.remove('open'); // Закрываем панель
-              setTimeout(() => {
-                sidePanel.classList.add('open'); // Открываем панель снова после задержки
-              }, 600); // Задержка, чтобы панель успела закрыться перед повторным открытием
-            }
-            // Если панель закрыта, открываем ее
-            else if (!sidePanel.classList.contains('open')) {
-              sidePanel.classList.add('open');
-            }
-
-            lastOpenedButton = buttonId; // Обновляем последнюю открытую кнопку
-          });
-        });
+        function toggleSelect(element) {
+            element.classList.toggle("selected");
+        }
     </script>
 
 </body>
+
 </html>
