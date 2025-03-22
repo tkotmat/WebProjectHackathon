@@ -1,51 +1,72 @@
-﻿button {
+﻿/* Стили для боковой панели справа */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    right: -250px; /* Панель будет скрыта справа */
+    top: 0;
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Контент сверху */
+}
+
+.sidebar-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 20px;
+}
+
+/* Стили для элементов в боковой панели */
+.sidebar-item {
+    margin-bottom: 20px;
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+    .sidebar-item h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .sidebar-item p {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .sidebar-item a {
+        color: #4CAF50;
+        text-decoration: none;
+        font-size: 14px;
+        display: block; /* Чтобы ссылка была на новой строке */
+    }
+
+        .sidebar-item a:hover {
+            text-decoration: underline;
+        }
+
+/* Стили для кнопки */
+.toggle-btn {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Центрируем кнопку */
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-}
-
-.side-panel {
-    position: fixed;
-    top: 0;
-    right: -300px; /* Скрыта за экраном */
-    width: 300px;
-    height: 100%;
-    background-color: black;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: right 0.3s ease;
-}
-
-    .side-panel.open {
-        right: 0; /* Показываем панель */
-    }
-
-p {
-    font-size: 24px; /* Увеличиваем размер шрифта */
-    line-height: 1.5; /* Увеличиваем межстрочный интервал для улучшения читаемости */
-}
-
-/* Стиль для кнопки на панели */
-.center-button {
-    position: absolute;
-    bottom: 100px; /* Размещаем кнопку внизу */
-    margin-top: 600px;
-    left: 50%;
-    margin-bottom: 50px;
-    transform: translateX(-50%); /* Центрируем по горизонтали */
-    background-color: #007bff; /* Синий цвет */
+    background-color: #4CAF50;
     color: white;
-    font-size: 18px;
     border: none;
-    border-radius: 25px; /* Круглые углы */
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    size: 150px;
+    border-radius: 5px;
+    z-index: 10000;
 }
 
-.center-button:hover {
-    background-color: #0056b3; /* Темнее синий при наведении */
+/* Открытая панель */
+.sidebar.open {
+    right: 0; /* Панель появляется справа */
 }

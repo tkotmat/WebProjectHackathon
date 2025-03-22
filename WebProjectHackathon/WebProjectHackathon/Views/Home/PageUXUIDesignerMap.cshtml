@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI/UX- дизайнер</title>
     <link rel="stylesheet" href="~/css/profession4.css">
+    <link rel="stylesheet" href="~/css/СSS.css">
 </head>
 
 <body>
@@ -19,13 +20,13 @@
     <div class="roadmap-container">
 
         <div class="step-container">
-            <div class="step" onclick="toggleSelect(this)">Вивчення теорії</div>
+            <div class="step" onclick="toggleSidebar()">Вивчення теорії</div>
             <div class="step-description">Менеджмент, психологія, HR-курси</div>
         </div>
 
         <div class="step-container">
             <div class="step-description">LinkedIn, Work.ua, Djinni, ATS-системи (Workable, Greenhouse)</div>
-            <div class="step" onclick="toggleSelect(this)">Освоєння HR-інструментів</div>
+            <div class="step" onclick="toggleSidebar()">Освоєння HR-інструментів</div>
 
         </div>
 
@@ -35,7 +36,7 @@
                 <br>
                 Робота з конфліктами
             </div>
-            <div class="step" onclick="toggleSelect(this)">Розвиток комунікаційних навичок</div>
+            <div class="step" onclick="toggleSidebar()">Розвиток комунікаційних навичок</div>
 
 
         </div>
@@ -43,19 +44,49 @@
         <div class="step-container">
 
             <div class="step-description">Оформлення документів</div>
-            <div class="step" onclick="toggleSelect(this)">Знання трудового законодавства</div>
+            <div class="step" onclick="toggleSidebar()">Знання трудового законодавства</div>
         </div>
         <div class="step-container">
             <div class="step-description">Стажування у HR-відділі</div>
-            <div class="step" onclick="toggleSelect(this)">Практика та працевлаштування</div>
-
+            <div class="step" onclick="toggleSidebar()">Практика та працевлаштування</div>
 
         </div>
     </div>
 
 
+    <div class="sidebar">
+        <h2 class="sidebar-title">Заголовок</h2>
+        <ul>
+            <li class="sidebar-item">
+                <h3>Название 1</h3>
+                <p>Описание для первого пункта. Это краткая информация о теме.</p>
+                <a href="https://source1.com" target="_blank">Источник 1</a>
+            </li>
+            <li class="sidebar-item">
+                <h3>Название 2</h3>
+                <p>Описание для второго пункта. Краткая информация о втором пункте.</p>
+                <a href="https://source2.com" target="_blank">Источник 2</a>
+            </li>
+            <li class="sidebar-item">
+                <h3>Название 3</h3>
+                <p>Описание для третьего пункта. Описание контекста этого пункта.</p>
+                <a href="https://source3.com" target="_blank">Источник 3</a>
+            </li>
+            <li class="sidebar-item">
+                <h3>Название 4</h3>
+                <p>Описание для четвертого пункта. Это описание для последнего пункта.</p>
+                <a href="https://source4.com" target="_blank">Источник 4</a>
+            </li>
+        </ul>
+        <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+    </div>
 
     <script>
+          function toggleSidebar() {
+          const sidebar = document.querySelector('.sidebar');
+          sidebar.classList.toggle('open');
+        }
+
         function toggleSelect(element) {
             element.classList.toggle("selected");
         }
