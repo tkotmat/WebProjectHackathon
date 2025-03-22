@@ -1,0 +1,94 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #e0f7fa, #d0f2e7);
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 150, 136, 0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    header h1 {
+        color: white;
+    }
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+.title {
+    margin: 30px 0;
+    font-size: 28px;
+}
+
+.professions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profession {
+    background: white;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+    .profession:hover {
+        transform: scale(1.03);
+    }
+
+    .profession img {
+        width: 80px;
+    }
+
+.info {
+    text-align: left;
+    flex: 1;
+    padding: 0 20px;
+}
+
+.btn {
+    background: #009688;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+    .btn:hover {
+        background: #00796B;
+        transform: scale(1.1);
+    }
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #004D40;
+    color: white;
+}

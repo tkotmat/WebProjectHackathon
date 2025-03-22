@@ -1,0 +1,57 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Скрыта за экраном */
+    width: 300px;
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: right 0.3s ease;
+}
+
+    .side-panel.open {
+        right: 0; /* Показываем панель */
+    }
+
+p {
+    font-size: 24px; /* Увеличиваем размер шрифта */
+    line-height: 1.5; /* Увеличиваем межстрочный интервал для улучшения читаемости */
+}
+
+/* Стиль для кнопки на панели */
+.center-button {
+    position: absolute;
+    bottom: 20px; /* Размещаем кнопку внизу */
+    margin-top: 850px;
+    left: 50%;
+    margin-bottom: 50px;
+    transform: translateX(-50%); /* Центрируем по горизонтали */
+    background-color: #007bff; /* Синий цвет */
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px; /* Круглые углы */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    size: 150px;
+}
+
+.center-button:hover {
+    background-color: #0056b3; /* Темнее синий при наведении */
+}
