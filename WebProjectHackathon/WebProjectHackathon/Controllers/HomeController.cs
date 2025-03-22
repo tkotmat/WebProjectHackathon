@@ -6,11 +6,11 @@ namespace WebProjectHackathon.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<HomeController> _Intex;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> intex)
     {
-        _logger = logger;
+        _Intex = intex;
     }
 
     public IActionResult Index()
@@ -18,7 +18,22 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult PageHRMap()
+    {
+        return View();
+    }
+
+    public IActionResult PageBackEndMap()
+    {
+        return View();
+    }
+
+    public IActionResult PageFrontEndMap()
+    {
+        return View();
+    }
+
+    public IActionResult PageUXUIDesignerMap()
     {
         return View();
     }
