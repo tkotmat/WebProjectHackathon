@@ -37,8 +37,8 @@ p {
 /* Стиль для кнопки на панели */
 .center-button {
     position: absolute;
-    bottom: 20px; /* Размещаем кнопку внизу */
-    margin-top: 850px;
+    bottom: 100px; /* Размещаем кнопку внизу */
+    margin-top: 600px;
     left: 50%;
     margin-bottom: 50px;
     transform: translateX(-50%); /* Центрируем по горизонтали */
