@@ -20,31 +20,35 @@
     <div class="roadmap-container">
 
         <div class="step-container">
-            <div class="step" onclick="toggleSidebar()" >Вивчення мови програмування
+            <div class="step" id="step-container1" onclick="toggleSidebar(this)">
+                Вивчення мови програмування
+                <button id="toggleButton1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; border: none; background: transparent; cursor: pointer;"></button>
             </div>
             <div class="step-description">JavaScript (Node.js), Python, PHP, Java або C#</div>
         </div>
 
         <div class="step-container">
-            <div class="step" onclick="toggleSidebar()" >Робота з базами даних
+            <div class="step" onclick="toggleSidebar(this)">
+                Робота з базами даних
             </div>
             <div class="step-description">SQL (PostgreSQL, MySQL) або NoSQL (MongoDB, Firebase)</div>
         </div>
 
         <div class="step-container">
-            <div class="step" onclick="toggleSidebar()">Архітектура та серверні технології
+            <div class="step" onclick="toggleSidebar(this)">
+                Архітектура та серверні технології
             </div>
             <div class="step-description">MVC, REST API, GraphQL. Аутентифікація (JWT, OAuth)</div>
 
         </div>
 
         <div class="step-container">
-            <div class="step" onclick="toggleSidebar()" >DevOps та хмарні технології</div>
+            <div class="step" onclick="toggleSidebar(this)">DevOps та хмарні технології</div>
             <div class="step-description">Docker, Kubernetes, AWS, CI/CD</div>
         </div>
 
         <div class="step-container">
-            <div class="step" onclick="toggleSidebar()">Практика та працевлаштування</div>
+            <div class="step" onclick="toggleSidebar(this)">Практика та працевлаштування</div>
             <div class="step-description">Створення портфоліо (GitHub). Стажування, перша робота</div>
 
         </div>
@@ -54,39 +58,140 @@
         <h2 class="sidebar-title">Заголовок</h2>
         <ul>
             <li class="sidebar-item">
-                <h3>Название 1</h3>
-                <p>Описание для первого пункта. Это краткая информация о теме.</p>
-                <a href="https://source1.com" target="_blank">Источник 1</a>
+                <h3 id="heading1">Название 1</h3>
+                <p id="Description1"> Описание для первого пункта. Это краткая информация о теме.</p>
+                <a id="link1" href="https://source1.com" target="_blank">Источник 1</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 2</h3>
-                <p>Описание для второго пункта. Краткая информация о втором пункте.</p>
-                <a href="https://source2.com" target="_blank">Источник 2</a>
+                <h3 id="heading2">Название 2</h3>
+                <p id="Description2">Описание для второго пункта. Краткая информация о втором пункте.</p>
+                <a id="link2" href="https://source2.com" target="_blank">Источник 2</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 3</h3>
-                <p>Описание для третьего пункта. Описание контекста этого пункта.</p>
-                <a href="https://source3.com" target="_blank">Источник 3</a>
+                <h3 id="heading3">Название 3</h3>
+                <p id="Description3">Описание для третьего пункта. Описание контекста этого пункта.</p>
+                <a id="link3" href="https://source3.com" target="_blank">Источник 3</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 4</h3>
-                <p>Описание для четвертого пункта. Это описание для последнего пункта.</p>
-                <a href="https://source4.com" target="_blank">Источник 4</a>
+                <h3 id="heading4">Название 4</h3>
+                <p id="Description4">Описание для четвертого пункта. Это описание для последнего пункта.</p>
+                <a id="link4" href="https://source4.com" target="_blank">Источник 4</a>
             </li>
         </ul>
-        <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+        <button class="toggle-btn">Toggle Sidebar</button>
     </div>
 
     <script>
-          function toggleSidebar() {
-          const sidebar = document.querySelector('.sidebar');
-          sidebar.classList.toggle('open');
+        function toggleSidebar(element) {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+            tect(element);
         }
 
-        function toggleSelect(element) {
-            element.classList.toggle("selected");
+        function tect(element) {
+            let name1 = ["Вибір мови програмування","Основи синтаксису", "Робота з бібліотеками та фреймворками", "Практика та створення проєктів"];
+            let DescriptionAppays1 = ["Перед початком навчання варто визначитися з мовою програмування. Вибір залежить від мети: Python,JavaScript, Java, C#, C++, Swift, Kotlin",
+            "Після вибору мови потрібно освоїти її базові конструкції: Змінні та типи даних, Оператори та умови,Цикли та функції",
+            "Бібліотеки та фреймворки допомагають пришвидшити розробку: Django, Flask – для бекенду,Spring Boot – для Java-додатків ",
+            "Кращий спосіб вивчити програмування – практика: Розв’язуйте задачі на алгоритми,Беріть участь у хакатонах,Розробляйте власні проєкти"];
+            let linkAppays1 = ["https://source1.com", "https://source2.com", "https://source3.com", "https://source4.com"];
+
+            let name2 = ["Основи баз даних","Проєктування баз даних", "Робота з реляційними та NoSQL базами", "Оптимізація та безпека баз даних"];
+            let DescriptionAppays2 = ["База даних – це організований набір даних, що зберігається та керується системою управління базами даних (СУБД). Основні поняття: Реляційні БД (SQL) – MySQL, PostgreSQL. Нереляційні БД (NoSQL) – MongoDB, Redis, Cassandra та Запити SQL – SELECT, INSERT, UPDATE, DELETE",
+            "Щоб створити ефективну БД, потрібно враховувати: Нормалізацію (запобігання дублюванню даних), Зв’язки між таблицями (один-до-одного, один-до-багатьох), Індекси для пришвидшення пошуку даних",
+            "Реляційні БД використовують SQL-запити, тоді як NoSQL підходять для гнучкого зберігання даних: MySQL/PostgreSQL – класичні реляційні БД, Redis – ключ-значення для кешування, Firebase – хмарне сховище",
+            "Щоб база працювала швидко та безпечно, потрібно: Використовувати індекси для швидкого пошуку, Уникати надмірної вкладеності запитів,Захищати дані від SQL-ін’єкцій"];
+            let linkAppays2 = ["https://source1.com", "https://source2.com", "https://source3.com", "https://source4.com"];
+
+            let name3 = ["Основи архітектури програмного забезпечення","Серверні технології та веб-сервери", "Бази даних у серверних застосунках", "Масштабування, балансування навантаження та безпека"];
+            let DescriptionAppays3 = ["Опис 1", "Опис 2", "Опис 3", "Опис 4"];
+            let linkAppays3 = ["https://source1.com", "https://source2.com", "https://source3.com", "https://source4.com"];
+
+            let name4 = ["Вивчення база данных","Вивчення база данных", "Вивчення база данных", "Вивчення база данных"];
+            let DescriptionAppays4 = ["Опис 1", "Опис 2", "Опис 3", "Опис 4"];
+            let linkAppays4 = ["https://source1.com", "https://source2.com", "https://source3.com", "https://source4.com"];
+
+            let name5 = ["Вивчення база данных","Вивчення база данных", "Вивчення база данных", "Вивчення база данных"];
+            let DescriptionAppays5 = ["Опис 1", "Опис 2", "Опис 3", "Опис 4"];
+            let linkAppays5 = ["https://source1.com", "https://source2.com", "https://source3.com", "https://source4.com"];
+
+
+            let headingsArray = [
+                { text: document.getElementById('heading1')},
+                { text: document.getElementById('heading2')},
+                { text: document.getElementById('heading3')},
+                { text: document.getElementById('heading4')}
+            ];
+
+            let DescriptionArray = [
+                { text: document.getElementById('Description1')},
+                { text: document.getElementById('Description2')},
+                { text: document.getElementById('Description3')},
+                { text: document.getElementById('Description4')}
+            ];
+
+            let linkArray = [
+                { text: document.getElementById('link1')},
+                { text: document.getElementById('link2')},
+                { text: document.getElementById('link3')},
+                { text: document.getElementById('link4')}
+            ];
+
+            if (element.innerText === "Вивчення мови програмування") {
+                for (let i = 0; i < headingsArray.length; i++) {
+                    headingsArray[i].text.innerText = name1[i];
+                }
+
+                for (let i = 0; i < DescriptionArray.length; i++) {
+                    DescriptionArray[i].text.innerText = DescriptionAppays1[i];
+                }
+
+                for (let i = 0; i < linkArray.length; i++) {
+                    linkArray[i].text.href = linkAppays1[i];
+                }
+            } else if (element.innerText === "Робота з базами даних") {
+                for (let i = 0; i < headingsArray.length; i++) {
+                    headingsArray[i].text.innerText = name2[i];
+                }
+                for (let i = 0; i < DescriptionArray.length; i++) {
+                    DescriptionArray[i].text.innerText = DescriptionAppays2[i];
+                }
+                for (let i = 0; i < linkArray.length; i++) {
+                    linkArray[i].text.href = linkAppays2[i];
+                }
+            } else if (element.innerText === "Архітектура та серверні технології") {
+                for (let i = 0; i < headingsArray.length; i++) {
+                    headingsArray[i].text.innerText = name3[i];
+                }
+                for (let i = 0; i < DescriptionArray.length; i++) {
+                    DescriptionArray[i].text.innerText = DescriptionAppays3[i];
+                }
+                for (let i = 0; i < linkArray.length; i++) {
+                    linkArray[i].text.href = linkAppays3[i];
+                }
+            } else if (element.innerText === "DevOps та хмарні технології") {
+                for (let i = 0; i < headingsArray.length; i++) {
+                    headingsArray[i].text.innerText = name4[i];
+                }
+                for (let i = 0; i < DescriptionArray.length; i++) {
+                    DescriptionArray[i].text.innerText = DescriptionAppays4[i];
+                }
+                for (let i = 0; i < linkArray.length; i++) {
+                    linkArray[i].text.href = linkAppays4[i];
+                }
+            } else if (element.innerText === "Практика та працевлаштування") {
+                for (let i = 0; i < headingsArray.length; i++) {
+                    headingsArray[i].text.innerText = name5[i];
+                }
+                for (let i = 0; i < DescriptionArray.length; i++) {
+                    DescriptionArray[i].text.innerText = DescriptionAppays5[i];
+                }
+                for (let i = 0; i < linkArray.length; i++) {
+                    linkArray[i].text.href = linkAppays5[i];
+                }
+            }
         }
     </script>
-
 </body>
+
 </html>
