@@ -1,5 +1,4 @@
-﻿:
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uk">
 
 <head>
@@ -15,7 +14,7 @@
     <header>
         <a href='@Url.Action("index", "Home")' button class="back-button">Назад </a><
         <h1 class="title">Шлях UI/UX- дизайнера</h1>
-        <button class="submit-button">Надіслати заявку на роботу</button>
+        <button id="buttonSumbit" class="submit-button">Надіслати заявку на роботу</button>
     </header>
 
     <div class="roadmap-container">
@@ -83,18 +82,51 @@
                 <a id="link4" href="https://source4.com" target="_blank">Джерело</a>
             </li>
         </ul>
-        <button id="buttonBelow" class="toggle-btn">Toggle Sidebar</button>
+        <button id="buttonBelow" class="toggle-btn">Вивчине</button>
     </div>
 
     <script>
-         function toggleSidebar(element) {
+        let greenCount = 0;
+        let lastOpenedButton = null;
+
+        function toggleSidebar(element) {
             const sidebar = document.querySelector('.sidebar');
             sidebar.classList.toggle('open');
-            tect4(element)
+            tect4(element);
+
         }
 
         function toggleSelect(element) {
             element.classList.toggle("selected");
+            lastOpenedButton = element;
+        }
+
+        window.onload = function () {
+            const buttonBelow = document.getElementById("buttonBelow");
+            const submitButton = document.getElementById("buttonSumbit");
+            buttonBelow.addEventListener("click", buttonBelowLogic);
+            submitButton.addEventListener("click", submitButtonLogic);
+        }
+
+        function buttonBelowLogic() {
+            if (lastOpenedButton) {
+                const activeStep = lastOpenedButton;
+                if (activeStep.style.backgroundColor === "#778D45") {
+                    activeStep.style.backgroundColor = "";
+                    greenCount--;
+                } else {
+                    activeStep.style.backgroundColor = "#778D45";
+                    greenCount++;
+                }
+            }
+        }
+
+        function submitButtonLogic() {
+            if (greenCount >= 3) {
+                alert("Ми з вами зв'яжемось пізніше");
+            } else {
+                alert("Вивчіть хоча б 3 теми");
+            }
         }
     </script>
     <script src="~/js/InfoPanelUpdatesUXUI.js"></script>

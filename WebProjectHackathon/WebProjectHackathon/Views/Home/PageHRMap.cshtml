@@ -20,13 +20,13 @@
     <div class="roadmap-container">
 
         <div id="divContent1" class="step-container" onclick="toggleSidebar(this)">
-            <div class="step" onclick="toggleSelect(this)">Вивчення теорії</div>
-            <div class="step-description">Менеджмент, психологія, HR-курси</div>
+            <div class="step-description">Вивчення теорії</div>
+            <div class="step" onclick="toggleSelect(this)">Менеджмент, психологія, HR-курси</div>
         </div>
 
         <div id="divContent2" class="step-container" onclick="toggleSidebar(this)">
-            <div onclick="toggleSelect(this)" class="step-description">LinkedIn, Work.ua, Djinni, ATS-системи (Workable, Greenhouse)</div>
-            <div class="step">
+            <div class="step-description">LinkedIn, Work.ua, Djinni, ATS-системи (Workable, Greenhouse)</div>
+            <div class="step" onclick="toggleSelect(this)">
                 Освоєння
                 <br>
                 HR-інструментів
@@ -35,25 +35,25 @@
         </div>
 
         <div id="divContent3" class="step-container" onclick="toggleSidebar(this)">
-            <div onclick="toggleSelect(this)" class="step-description">
+            <div class="step-description">
                 Проведення співбесід
                 <br>
                 Робота з конфліктами
             </div>
-            <div class="step">Розвиток комунікаційних навичок</div>
+            <div class="step" onclick="toggleSelect(this)">Розвиток комунікаційних навичок</div>
 
 
         </div>
 
         <div id="divContent4" class="step-container" onclick="toggleSidebar(this)">
 
-            <div class="step-description" onclick="toggleSelect(this)">Оформлення документів</div>
-            <div class="step">Знання трудового законодавства</div>
+            <div class="step-description">Оформлення документів</div>
+            <div class="step" onclick="toggleSelect(this)">Знання трудового законодавства</div>
         </div>
-        <div id="divContent5" class="step-container" onclick="toggleSidebar(this)">
-            <div class="step-description" onclick="toggleSelect(this)">Стажування у HR-відділі</div>
-            <div class="step">Практика та працевлаштування</div>
 
+        <div id="divContent5" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step-description">Стажування у HR-відділі</div>
+            <div class="step" onclick="toggleSelect(this)">Практика та працевлаштуванняо</div>
         </div>
     </div>
 
@@ -81,23 +81,26 @@
                 <a id="link4" href="https://source4.com" target="_blank">Источник 4</a>
             </li>
         </ul>
-        <button id="buttonBelow" class="toggle-btn">Toggle Sidebar</button>
+        <button id="buttonBelow" class="toggle-btn">Вивчине</button>
     </div>
 
     <script>
-          let greenCount = 0;
-          let lastOpenedButton = null;
+        let greenCount = 0;
+        let lastOpenedButton = null;
 
-          function toggleSidebar(element) {
-          const sidebar = document.querySelector('.sidebar');
-          sidebar.classList.toggle('open');
-          tect2(element);
+        function toggleSidebar(element) {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+            tect1(element);
+
         }
 
         function toggleSelect(element) {
             element.classList.toggle("selected");
+            lastOpenedButton = element;
         }
-        window.onload=function(){
+
+        window.onload = function () {
             const buttonBelow = document.getElementById("buttonBelow");
             const submitButton = document.getElementById("buttonSumbit");
             buttonBelow.addEventListener("click", buttonBelowLogic);
@@ -119,9 +122,9 @@
 
         function submitButtonLogic() {
             if (greenCount >= 3) {
-                alert("Вітаємо! Ви пройшли важливі кроки на шляху до професії!");
+                alert("Ми з вами зв'яжемось пізніше");
             } else {
-                alert("Виберіть хоча б 3 кроки, щоб продовжити.");
+                alert("Вивчіть хоча б 3 теми");
             }
         }
     </script>
