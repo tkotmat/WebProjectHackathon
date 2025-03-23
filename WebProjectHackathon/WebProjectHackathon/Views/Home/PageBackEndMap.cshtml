@@ -19,36 +19,35 @@
 
     <div class="roadmap-container">
 
-        <div class="step-container">
-            <div class="step" id="divContent1" onclick="toggleSidebar(this)">
+        <div id="divContent1" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">
                 Вивчення мови програмування
-                <button id="toggleButton1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; border: none; background: transparent; cursor: pointer;"></button>
             </div>
             <div class="step-description">JavaScript (Node.js), Python, PHP, Java або C#</div>
         </div>
 
-        <div class="step-container">
-            <div id="divContent2" class="step" onclick="toggleSidebar(this)">
+        <div id="divContent2" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">
                 Робота з базами даних
             </div>
             <div class="step-description">SQL (PostgreSQL, MySQL) або NoSQL (MongoDB, Firebase)</div>
         </div>
 
-        <div class="step-container">
-            <div id="divContent3" class="step" onclick="toggleSidebar(this)">
+        <div id="divContent3" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">
                 Архітектура та серверні технології
             </div>
             <div class="step-description">MVC, REST API, GraphQL. Аутентифікація (JWT, OAuth)</div>
 
         </div>
 
-        <div class="step-container">
-            <div id="divContent4" class="step" onclick="toggleSidebar(this)">DevOps та хмарні технології</div>
+        <div id="divContent4" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">DevOps та хмарні технології</div>
             <div class="step-description">Docker, Kubernetes, AWS, CI/CD</div>
         </div>
 
-        <div class="step-container">
-            <div id="divContent5" class="step" onclick="toggleSidebar(this)">Практика та працевлаштування</div>
+        <div id="divContent5"  class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">Практика та працевлаштування</div>
             <div class="step-description">Створення портфоліо (GitHub). Стажування, перша робота</div>
 
         </div>
@@ -78,7 +77,7 @@
                 <a id="link4" href="https://source4.com" target="_blank">Источник 4</a>
             </li>
         </ul>
-        <button class="toggle-btn">Toggle Sidebar</button>
+        <button id="buttonBelow" class="toggle-btn">Toggle Sidebar</button>
     </div>
 
     <script>
@@ -86,10 +85,28 @@
             const sidebar = document.querySelector('.sidebar');
             sidebar.classList.toggle('open');
             tect(element);
+
+
         }
+
         function toggleSelect(element) {
             element.classList.toggle("selected");
+            lastOpenedButton = element;
         }
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const buttonBelow = document.getElementById("buttonBelow");
+        buttonBelow.addEventListener("click", () => {
+            if (lastOpenedButton) {
+                const activeStep = lastOpenedButton;
+                if (activeStep.style.backgroundColor === "#778D45") {
+                    activeStep.style.backgroundColor = "";
+                } else {
+                    activeStep.style.backgroundColor = "#778D45";
+                }
+            }
+        });
+    });
     </script>
 
     <script src="~/js/InfoPanelUpdatesBack.js"></script>

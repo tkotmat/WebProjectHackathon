@@ -18,10 +18,10 @@
 
     <div class="roadmap-container">
 
-        <div class="step-container">
+        <div id="divContent1" class="step-container" onclick="toggleSidebar(this)">
             <div class="step-description">Основи HTML, CSS, JavaScript. Розуміння структури веб-сторінок.</div>
 
-            <div id="divContent1" class="step" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">
                 Вивчити основи
                 <br> веб-розробки
             </div>
@@ -80,12 +80,12 @@
                 <a id="link4" href="https://source4.com" target="_blank">Источник 4</a>
             </li>
         </ul>
-        <button class="toggle-btn">Toggle Sidebar</button>
+        <button id="buttonBelow" class="toggle-btn">Toggle Sidebar</button>
     </div>
 
     <script>
 
-          function toggleSidebar(element) {
+        function toggleSidebar(element) {
             const sidebar = document.querySelector('.sidebar');
             sidebar.classList.toggle('open');
             tect1(element);
@@ -95,7 +95,22 @@
 
         function toggleSelect(element) {
             element.classList.toggle("selected");
+            lastOpenedButton = element;
         }
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const buttonBelow = document.getElementById("buttonBelow");
+        buttonBelow.addEventListener("click", () => {
+            if (lastOpenedButton) {
+                const activeStep = lastOpenedButton;
+                if (activeStep.style.backgroundColor === "#778D45") {
+                    activeStep.style.backgroundColor = "";
+                } else {
+                    activeStep.style.backgroundColor = "#778D45";
+                }
+            }
+        });
+    });
     </script>
 
     <script src="~/js/InfoPanelUpdatesFrond.js"></script>
