@@ -14,7 +14,7 @@
     <header>
         <a href='@Url.Action("index", "Home")' button class="back-button">Назад </a>
         <h1 class="title">Шлях Backend-розробника</h1>
-        <button class="submit-button">Відправити заявку на консультацію</button>
+        <button id="buttonSumbit" class="submit-button">Надіслати заявку на роботу</button>
     </header>
 
     <div class="roadmap-container">
@@ -81,12 +81,13 @@
     </div>
 
     <script>
+        let greenCount = 0;
+        let lastOpenedButton = null;
+
         function toggleSidebar(element) {
             const sidebar = document.querySelector('.sidebar');
             sidebar.classList.toggle('open');
             tect(element);
-
-
         }
 
         function toggleSelect(element) {
@@ -94,19 +95,33 @@
             lastOpenedButton = element;
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
-        const buttonBelow = document.getElementById("buttonBelow");
-        buttonBelow.addEventListener("click", () => {
+        window.onload=function(){
+            const buttonBelow = document.getElementById("buttonBelow");
+            const submitButton = document.getElementById("buttonSumbit");
+            buttonBelow.addEventListener("click", buttonBelowLogic);
+            submitButton.addEventListener("click", submitButtonLogic);
+        }
+
+        function buttonBelowLogic() {
             if (lastOpenedButton) {
                 const activeStep = lastOpenedButton;
                 if (activeStep.style.backgroundColor === "#778D45") {
                     activeStep.style.backgroundColor = "";
+                    greenCount--;
                 } else {
                     activeStep.style.backgroundColor = "#778D45";
+                    greenCount++;
                 }
             }
-        });
-    });
+        }
+
+        function submitButtonLogic() {
+            if (greenCount >= 3) {
+                alert("Вітаємо! Ви пройшли важливі кроки на шляху до професії!");
+            } else {
+                alert("Виберіть хоча б 3 кроки, щоб продовжити.");
+            }
+        }
     </script>
 
     <script src="~/js/InfoPanelUpdatesBack.js"></script>

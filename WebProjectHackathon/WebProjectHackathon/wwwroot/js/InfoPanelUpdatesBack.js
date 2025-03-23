@@ -21,10 +21,10 @@
     let linkAppays3 = ["https://source1.com", "https://source2.com", "https://source3.com", "https://source4.com"];
 
     let name4 = ["Основи DevOps", "Інструменти DevOps", "Хмарні технології", "Моніторинг та безпека"];
-    let DescriptionAppays4 = ["DevOps – це методологія, що поєднує розробку (Development) та операційну діяльність (Operations). Вона допомагає автоматизувати процеси та скоротити час розгортання продуктів. Основні принципи: CI/CD (Continuous Integration & Continuous Deployment),Infrastructure as Code (IaC), Моніторинг та логування",
-        "Опис Автоматизація – ключовий аспект DevOps. Основні інструменти: Контейнери – Docker, Podman, Оркестрація контейнерів – Kubernetes, •	Автоматизація – Ansible, Terraform, CI/CD-пайплайни – GitHub Actions, Jenkins, GitLab CI.",
-        "Хмарні платформи надають інструменти для масштабування та керування інфраструктурою: AWS (Amazon Web Services), Google Cloud Platform (GCP), Microsoft Azure, Serverless-технології (AWS Lambda, Google Cloud Functions).",
-        "Для стабільної роботи системи важливо впровадити моніторинг та безпеку: Моніторинг логів та продуктивності – Prometheus, Grafana, ELK Stack, Безпека – IAM (управління доступом), VPN, секретне зберігання ключів (Vault), Резервне копіювання – S3, Azure Backup"];
+    let DescriptionAppays4 = ["DevOps – це методологія, що поєднує розробку (Development) та операційну діяльність (Operations).",
+        "Опис Автоматизація – ключовий аспект DevOps. Основні інструменти: Контейнери – Docker, Podman, Jenkins, GitLab CI.",
+        "Хмарні платформи надають інструменти для масштабування та керування інфраструктурою: AWS (Amazon Web Services)",
+        "Для стабільної роботи системи важливо впровадити моніторинг та безпеку: Моніторинг логів та продуктивності"];
     let linkAppays4 = ["https://source1.com", "https://source2.com", "https://source3.com", "https://source4.com"];
 
     let name5 = ["Практичний досвід та створення проєктів", "Написання резюме та портфоліо", "Підготовка до співбесіди", "Пошук роботи та перші кроки в кар'єрі"];
