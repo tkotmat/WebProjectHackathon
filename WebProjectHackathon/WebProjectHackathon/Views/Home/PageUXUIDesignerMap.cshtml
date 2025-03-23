@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿:
+<!DOCTYPE html>
 <html lang="uk">
 
 <head>
@@ -12,86 +13,91 @@
 <body>
 
     <header>
-        <a href='@Url.Action("index", "Home")' button class="back-button">Назад </a>
+        <a href='@Url.Action("index", "Home")' button class="back-button">Назад </a><
         <h1 class="title">Шлях UI/UX- дизайнера</h1>
         <button class="submit-button">Відправити заявку на консультацію</button>
     </header>
 
     <div class="roadmap-container">
 
-        <div class="step-container">
-            <div class="step" onclick="toggleSidebar()">Вивчення теорії</div>
-            <div class="step-description">Менеджмент, психологія, HR-курси</div>
-        </div>
-
-        <div class="step-container">
-            <div class="step-description">LinkedIn, Work.ua, Djinni, ATS-системи (Workable, Greenhouse)</div>
-            <div class="step" onclick="toggleSidebar()">Освоєння HR-інструментів</div>
-
-        </div>
-
-        <div class="step-container">
+        <div id="divContent1" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)" >Візуальна ієрархія</div>
             <div class="step-description">
-                Проведення співбесід
-                <br>
-                Робота з конфліктами
+                Колір, типографіка, розташування. Контраст, баланс, ритм.
+                Використання сіток (grid system).
             </div>
-            <div class="step" onclick="toggleSidebar()">Розвиток комунікаційних навичок</div>
+        </div>
+
+        <div id="divContent2" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step-description">
+                Аналіз поведінки, тестування макетів (Google Analytics, Hotjar,
+                A/B-тестування).
+            </div>
+            <div class="step" onclick="toggleSelect(this)">UX-дослідження</div>
+
+        </div>
+
+        <div id="divContent3" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step-description">
+                Figma, Adobe XD, Sketch – створення UI, прототипування, дизайн-системи.
+            </div>
+            <div class="step" onclick="toggleSelect(this)">Інструменти</div>
 
 
         </div>
 
-        <div class="step-container">
+        <div id="divContent4" class="step-container" onclick="toggleSidebar(this)">
 
-            <div class="step-description">Оформлення документів</div>
-            <div class="step" onclick="toggleSidebar()">Знання трудового законодавства</div>
+            <div class="step-description">Основи HTML, CSS, змінні, шрифти, кольорові схеми.</div>
+            <div class="step" onclick="toggleSelect(this)">Код для дизайнерів</div>
         </div>
-        <div class="step-container">
-            <div class="step-description">Стажування у HR-відділі</div>
-            <div class="step" onclick="toggleSidebar()">Практика та працевлаштування</div>
+        <div id="divContent5" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step-description">3-5 кейсів у Behance, Dribbble.</div>
+            <div class="step" onclick="toggleSelect(this)">Портфоліо</div>
+
 
         </div>
     </div>
-
 
     <div class="sidebar">
         <h2 class="sidebar-title">Заголовок</h2>
         <ul>
             <li class="sidebar-item">
-                <h3>Название 1</h3>
-                <p>Описание для первого пункта. Это краткая информация о теме.</p>
-                <a href="https://source1.com" target="_blank">Источник 1</a>
+                <h3 id="heading1"></h3>
+                <p id="Description1"></p>
+                <a id="link1" href="https://source1.com" target="_blank">Джерело</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 2</h3>
-                <p>Описание для второго пункта. Краткая информация о втором пункте.</p>
-                <a href="https://source2.com" target="_blank">Источник 2</a>
+                <h3 id="heading2"></h3>
+                <p id="Description2"></p>
+                <a id="link2" href="https://source2.com" target="_blank">Джерело</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 3</h3>
-                <p>Описание для третьего пункта. Описание контекста этого пункта.</p>
-                <a href="https://source3.com" target="_blank">Источник 3</a>
+                <h3 id="heading3"></h3>
+                <p id="Description3"></p>
+                <a id="link3" href="https://source3.com" target="_blank">Джерело</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 4</h3>
-                <p>Описание для четвертого пункта. Это описание для последнего пункта.</p>
-                <a href="https://source4.com" target="_blank">Источник 4</a>
+                <h3 id="heading4"></h3>
+                <p id="Description4"></p>
+                <a id="link4" href="https://source4.com" target="_blank">Джерело</a>
             </li>
         </ul>
-        <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+        <button id="buttonBelow" class="toggle-btn">Toggle Sidebar</button>
     </div>
 
     <script>
-          function toggleSidebar() {
-          const sidebar = document.querySelector('.sidebar');
-          sidebar.classList.toggle('open');
+         function toggleSidebar(element) {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+            tect4(element)
         }
 
         function toggleSelect(element) {
             element.classList.toggle("selected");
         }
     </script>
-
+    <script src="~/js/InfoPanelUpdatesUXUI.js"></script>
 </body>
 
 </html>

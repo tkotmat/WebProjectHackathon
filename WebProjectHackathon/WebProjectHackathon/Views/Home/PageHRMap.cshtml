@@ -19,14 +19,14 @@
 
     <div class="roadmap-container">
 
-        <div class="step-container">
-            <div class="step" onclick="toggleSidebar()">Вивчення теорії</div>
+        <div id="divContent1" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">Вивчення теорії</div>
             <div class="step-description">Менеджмент, психологія, HR-курси</div>
         </div>
 
-        <div class="step-container">
-            <div class="step-description">LinkedIn, Work.ua, Djinni, ATS-системи (Workable, Greenhouse)</div>
-            <div class="step" onclick="toggleSidebar()">
+        <div id="divContent2" class="step-container" onclick="toggleSidebar(this)">
+            <div onclick="toggleSelect(this)" class="step-description">LinkedIn, Work.ua, Djinni, ATS-системи (Workable, Greenhouse)</div>
+            <div class="step">
                 Освоєння
                 <br>
                 HR-інструментів
@@ -34,25 +34,25 @@
 
         </div>
 
-        <div class="step-container">
-            <div class="step-description">
+        <div id="divContent3" class="step-container" onclick="toggleSidebar(this)">
+            <div onclick="toggleSelect(this)" class="step-description">
                 Проведення співбесід
                 <br>
                 Робота з конфліктами
             </div>
-            <div class="step" onclick="toggleSidebar()">Розвиток комунікаційних навичок</div>
+            <div class="step">Розвиток комунікаційних навичок</div>
 
 
         </div>
 
-        <div class="step-container">
+        <div id="divContent4" class="step-container" onclick="toggleSidebar(this)">
 
-            <div class="step-description">Оформлення документів</div>
-            <div class="step" onclick="toggleSidebar()">Знання трудового законодавства</div>
+            <div class="step-description" onclick="toggleSelect(this)">Оформлення документів</div>
+            <div class="step">Знання трудового законодавства</div>
         </div>
-        <div class="step-container">
-            <div class="step-description">Стажування у HR-відділі</div>
-            <div class="step" onclick="toggleSidebar()">Практика та працевлаштування</div>
+        <div id="divContent5" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step-description" onclick="toggleSelect(this)">Стажування у HR-відділі</div>
+            <div class="step">Практика та працевлаштування</div>
 
         </div>
     </div>
@@ -61,39 +61,40 @@
         <h2 class="sidebar-title">Заголовок</h2>
         <ul>
             <li class="sidebar-item">
-                <h3>Название 1</h3>
-                <p>Описание для первого пункта. Это краткая информация о теме.</p>
-                <a href="https://source1.com" target="_blank">Источник 1</a>
+                <h3 id="heading1">Название 1</h3>
+                <p id="Description1"> Описание для первого пункта. Это краткая информация о теме.</p>
+                <a id="link1" href="https://source1.com" target="_blank">Источник 1</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 2</h3>
-                <p>Описание для второго пункта. Краткая информация о втором пункте.</p>
-                <a href="https://source2.com" target="_blank">Источник 2</a>
+                <h3 id="heading2">Название 2</h3>
+                <p id="Description2">Описание для второго пункта. Краткая информация о втором пункте.</p>
+                <a id="link2" href="https://source2.com" target="_blank">Источник 2</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 3</h3>
-                <p>Описание для третьего пункта. Описание контекста этого пункта.</p>
-                <a href="https://source3.com" target="_blank">Источник 3</a>
+                <h3 id="heading3">Название 3</h3>
+                <p id="Description3">Описание для третьего пункта. Описание контекста этого пункта.</p>
+                <a id="link3" href="https://source3.com" target="_blank">Источник 3</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 4</h3>
-                <p>Описание для четвертого пункта. Это описание для последнего пункта.</p>
-                <a href="https://source4.com" target="_blank">Источник 4</a>
+                <h3 id="heading4">Название 4</h3>
+                <p id="Description4">Описание для четвертого пункта. Это описание для последнего пункта.</p>
+                <a id="link4" href="https://source4.com" target="_blank">Источник 4</a>
             </li>
         </ul>
-        <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+        <button id="buttonBelow" class="toggle-btn">Toggle Sidebar</button>
     </div>
 
     <script>
-          function toggleSidebar() {
+          function toggleSidebar(element) {
           const sidebar = document.querySelector('.sidebar');
           sidebar.classList.toggle('open');
+          tect2(element);
         }
 
         function toggleSelect(element) {
             element.classList.toggle("selected");
         }
     </script>
-
+    <script src="~/js/InfoPanelUpdatesHR.js"></script>
 </body>
 </html>

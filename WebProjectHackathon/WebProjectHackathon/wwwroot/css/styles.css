@@ -127,3 +127,6 @@ nav a {
     flex-direction: column;
     text-align: left;
 }
+.img {
+    border-radius: 15px;
+}
