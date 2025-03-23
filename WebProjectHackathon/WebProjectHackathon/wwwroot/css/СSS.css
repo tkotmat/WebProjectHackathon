@@ -53,7 +53,8 @@
 /* Стили для кнопки */
 .toggle-btn {
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
+    margin-bottom: 480px;
     left: 50%;
     transform: translateX(-50%); /* Центрируем кнопку */
     padding: 10px 20px;

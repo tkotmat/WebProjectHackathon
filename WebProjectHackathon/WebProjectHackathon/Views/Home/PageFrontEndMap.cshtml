@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <a href="index.html" button class="back-button">Назад </a></button>
+        <a href='@Url.Action("index", "Home")' button class="back-button">Назад </a>
         <h1 class="title">Шлях Frontend- розробника</h1>
         <button class="submit-button">Відправити заявку на консультацію</button>
     </header>
@@ -21,38 +21,37 @@
         <div class="step-container">
             <div class="step-description">Основи HTML, CSS, JavaScript. Розуміння структури веб-сторінок.</div>
 
-            <div class="step" onclick="toggleSidebar()">
+            <div id="divContent1" class="step" onclick="toggleSidebar(this)">
                 Вивчити основи
                 <br> веб-розробки
             </div>
         </div>
 
-        <div class="step-container" onclick="toggleSidebar()">
+        <div id="divContent2" class="step-container" onclick="toggleSidebar(this)">
             <div class="step-description">React, Vue або Angular. Компонентний підхід, SPA, state management.</div>
             <div class="step" onclick="toggleSelect(this)">Освоїти сучасні фреймворки та бібліотеки</div>
 
         </div>
 
-        <div class="step-container" onclick="toggleSidebar()">
+        <div id="divContent3" class="step-container" onclick="toggleSidebar(this)">
             <div class="step-description">Chrome DevTools, Postman, Git, Webpack. Налагодження та оптимізація.</div>
             <div class="step" onclick="toggleSelect(this)">Вивчити інструменти розробника</div>
         </div>
 
-        <div class="step-container" onclick="toggleSidebar()">
+        <div id="divContent4" class="step-container" onclick="toggleSidebar(this)">
             <div class="step-description">REST API, GraphQL. Запити до серверів, обробка JSON.</div>
             <div class="step" onclick="toggleSelect(this)">Робота з API</div>
 
         </div>
 
-        <div class="step-container">
-            <div class="step-description" onclick="toggleSidebar()" >Верстка проектів, хостинг, підключення реальних API.</div>
-            <div class="step" onclick="toggleSelect(this)">Створити портфоліо</div>
+        <div id="divContent5" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step-description" >Верстка проектів, хостинг, підключення реальних API.</div>
+            <div class="step" onclick="toggleSelect()">Створити портфоліо</div>
         </div>
 
-        <div class="step-container" onclick="toggleSidebar()">
+        <div id="divContent6" class="step-container" onclick="toggleSidebar(this)">
             <div class="step-description">Фріланс, стажування, open-source проекти. Робота в команді.</div>
             <div class="step" onclick="toggleSelect(this)">Отримати перший комерційний досвід</div>
-
         </div>
 
     </div>
@@ -61,34 +60,37 @@
         <h2 class="sidebar-title">Заголовок</h2>
         <ul>
             <li class="sidebar-item">
-                <h3>Название 1</h3>
-                <p>Описание для первого пункта. Это краткая информация о теме.</p>
-                <a href="https://source1.com" target="_blank">Источник 1</a>
+                <h3 id="heading1">Название 1</h3>
+                <p id="Description1"> Описание для первого пункта. Это краткая информация о теме.</p>
+                <a id="link1" href="https://source1.com" target="_blank">Источник 1</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 2</h3>
-                <p>Описание для второго пункта. Краткая информация о втором пункте.</p>
-                <a href="https://source2.com" target="_blank">Источник 2</a>
+                <h3 id="heading2">Название 2</h3>
+                <p id="Description2">Описание для второго пункта. Краткая информация о втором пункте.</p>
+                <a id="link2" href="https://source2.com" target="_blank">Источник 2</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 3</h3>
-                <p>Описание для третьего пункта. Описание контекста этого пункта.</p>
-                <a href="https://source3.com" target="_blank">Источник 3</a>
+                <h3 id="heading3">Название 3</h3>
+                <p id="Description3">Описание для третьего пункта. Описание контекста этого пункта.</p>
+                <a id="link3" href="https://source3.com" target="_blank">Источник 3</a>
             </li>
             <li class="sidebar-item">
-                <h3>Название 4</h3>
-                <p>Описание для четвертого пункта. Это описание для последнего пункта.</p>
-                <a href="https://source4.com" target="_blank">Источник 4</a>
+                <h3 id="heading4">Название 4</h3>
+                <p id="Description4">Описание для четвертого пункта. Это описание для последнего пункта.</p>
+                <a id="link4" href="https://source4.com" target="_blank">Источник 4</a>
             </li>
         </ul>
-        <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+        <button class="toggle-btn">Toggle Sidebar</button>
     </div>
 
     <script>
 
-          function toggleSidebar() {
-          const sidebar = document.querySelector('.sidebar');
-          sidebar.classList.toggle('open');
+          function toggleSidebar(element) {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+            tect1(element);
+
+
         }
 
         function toggleSelect(element) {
@@ -96,6 +98,7 @@
         }
     </script>
 
+    <script src="~/js/InfoPanelUpdatesFrond.js"></script>
 </body>
 
 </html>
