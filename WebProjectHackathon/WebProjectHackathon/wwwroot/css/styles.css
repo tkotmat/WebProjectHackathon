@@ -20,12 +20,17 @@ header {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+h1 {
+    margin-left: 50px;
+}
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
     transition: 0.3s;
+    margin-right: 50px;
+    font-size: 20px;
 }
 
     nav a:hover {
