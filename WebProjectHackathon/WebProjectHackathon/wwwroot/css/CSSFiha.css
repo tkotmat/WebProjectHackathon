@@ -1,0 +1,73 @@
+﻿/* Стили для боковой панели справа */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    right: -250px; /* Панель будет скрыта справа */
+    top: 0;
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Контент сверху */
+}
+
+.sidebar-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 20px;
+}
+
+/* Стили для элементов в боковой панели */
+.sidebar-item {
+    margin-bottom: 20px;
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+    .sidebar-item h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .sidebar-item p {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .sidebar-item a {
+        color: #4CAF50;
+        text-decoration: none;
+        font-size: 14px;
+        display: block; /* Чтобы ссылка была на новой строке */
+    }
+
+        .sidebar-item a:hover {
+            text-decoration: underline;
+        }
+
+/* Стили для кнопки */
+.toggle-btn {
+    position: absolute;
+    bottom: 50px;
+    margin-bottom: 740px;
+    left: 50%;
+    transform: translateX(-50%); /* Центрируем кнопку */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 10000;
+}
+
+/* Открытая панель */
+.sidebar.open {
+    right: 0; /* Панель появляется справа */
+}
