@@ -30,19 +30,19 @@
 
     .sidebar-item h3 {
         margin: 0;
-        font-size: 16px;
+        font-size: 17px;
         font-weight: bold;
     }
 
     .sidebar-item p {
-        font-size: 13px;
+        font-size: 14px;
         margin: 5px 0;
     }
 
     .sidebar-item a {
         color: #4CAF50;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 14px;
         display: block; /* Чтобы ссылка была на новой строке */
     }
 

@@ -4,21 +4,21 @@
         "Основи мови програмування JavaScript: змінні, типи даних, функції, цикли та умови. Робота з DOM (Document Object Model), події та маніпуляція HTML-елементами.",
         "Знайомство з серверною частиною веб-розробки. Основи роботи з базами даних (SQL, NoSQL), сервери, API та бекенд-фреймворки, наприклад, ASP.NET MVC.",
         "Використання систем контролю версій, таких як Git. Основи хостингу, деплою веб-додатків, робота з хмарними платформами (Azure, AWS)."];
-    let linkAppays1 = ["https://source1.com", "https://source2.com", "https://source3.com", "https://source4.com"];
+    let linkAppays1 = ["https://developer.mozilla.org/uk/docs/Learn9", "https://developer.mozilla.org/uk/docs/Web/JavaScript", "https://learn.microsoft.com/uk-ua/aspnet/mvc/", "https://docs.github.com/uk/get-started"];
 
     let name2 = ["React.js", "Angular", "Vue.js", "ASP.NET Core"];
     let DescriptionAppays2 = ["Популярна бібліотека для створення інтерфейсів користувача. Основи роботи з компонентами, станами (state), пропсами (props) та хуками (hooks). Знайомство з JSX та віртуальним DOM.",
-        "Фреймворк від Google для побудови масштабованих SPA (Single Page Applications). Основи TypeScript, робота з компонентами, модулями, сервісами та RxJS.",
+        "Фреймворк від Google для побуд9ви масштабованих SPA (Single Page Applications). Основи TypeScript, робота з компонентами, модулями, сервісами та RxJS.",
         "Простий у засвоєнні фреймворк для створення реактивних інтерфейсів. Робота з шаблонами, директивами, Vue Router та Vuex.",
         "Сучасний бекенд-фреймворк від Microsoft для створення веб-додатків, API та мікросервісів. Вивчення контролерів, middleware, Entity Framework Core та автентифікації."];
-    let linkAppays2 = ["https://source1.com", "https://source2.com", "https://source3.com", "https://source4.com"];
+    let linkAppays2 = ["https://react.dev/", "https://source3.com", "https://source3.com", "https://learn.microsoft.com/en-us/aspnet/core/"];
 
     let name3 = ["Chrome DevTools", "Postman", "Webpack", "Docker"];
     let DescriptionAppays3 = ["Набір інструментів для налагодження веб-сторінок у браузері Google Chrome. Дозволяє аналізувати HTML, CSS, JavaScript, мережеві запити, продуктивність та помилки.",
         "Популярний інструмент для тестування API. Дозволяє надсилати HTTP-запити, перевіряти відповіді серверів, створювати колекції запитів та автоматизувати тестування.",
         "Модульний збирач JavaScript-додатків, що оптимізує код, обробляє CSS, зображення та інші ресурси. Вивчення конфігурації, лоадерів та плагінів.",
         "Платформа для контейнеризації, що дозволяє створювати, розгортати та керувати ізольованими середовищами для додатків. Основи Docker Compose, Docker Images та контейнерів."];
-    let linkAppays3 = ["https://source1.com", "https://source2.com", "https://source3.com", "https://source4.com"];
+    let linkAppays3 = ["https://developer.mozilla.org/uk/docs/Learn9", "https://developer.mozilla.org/uk/docs/Web/JavaScript", "https://learn.microsoft.com/uk-ua/aspnet/mvc/", "https://docs.github.com/uk/get-started"];
 
     let name6 = ["Фріланс-платформи", "Open Source та волонтерські проєкти", "Стажування та джуніор-вакансії", "Нетворкінг та знайомства"];
     let DescriptionAppays6 = ["Один із найпростіших способів отримати перші комерційні замовлення – почати працювати на фрілансі. Реєструйся на платформах, заповнюй профіль і пропонуй свої послуги.",
