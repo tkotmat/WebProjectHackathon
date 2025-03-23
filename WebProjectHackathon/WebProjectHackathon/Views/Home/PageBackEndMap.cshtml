@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backend-розробник</title>
-    <link rel="stylesheet" href="~/css/profession2.css">
+    <link rel="stylesheet" href="/css/profession.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="~/css/СSS.css">
 </head>
 
@@ -19,33 +20,30 @@
 
     <div class="roadmap-container">
 
-        <div class="step-container">
-            <div class="step" onclick="toggleSidebar()" >Вивчення мови програмування
-            </div>
-            <div class="step-description">JavaScript (Node.js), Python, PHP, Java або C#</div>
+        <div class="step-container" onclick="toggleSidebar()">
+            <div class="step-description">Вивчення мови програмування</div>
+            <div class="step" onclick="toggleSelect(this)">JavaScript (Node.js), Python, PHP, Java або C#</div>
         </div>
 
-        <div class="step-container">
-            <div class="step" onclick="toggleSidebar()" >Робота з базами даних
-            </div>
-            <div class="step-description">SQL (PostgreSQL, MySQL) або NoSQL (MongoDB, Firebase)</div>
+        <div class="step-container" onclick="toggleSidebar()">
+            <div class="step-description">Робота з базами даних</div>
+            <div class="step" onclick="toggleSelect(this)">SQL (PostgreSQL, MySQL) або NoSQL (MongoDB, Firebase)</div>
         </div>
 
-        <div class="step-container">
-            <div class="step" onclick="toggleSidebar()">Архітектура та серверні технології
-            </div>
-            <div class="step-description">MVC, REST API, GraphQL. Аутентифікація (JWT, OAuth)</div>
+        <div class="step-container" onclick="toggleSidebar()">
+            <div class="step-description">Архітектура та серверні технології</div>
+            <div class="step" onclick="toggleSelect(this)">MVC, REST API, GraphQL. Аутентифікація (JWT, OAuth)</div>
 
         </div>
 
-        <div class="step-container">
-            <div class="step" onclick="toggleSidebar()" >DevOps та хмарні технології</div>
-            <div class="step-description">Docker, Kubernetes, AWS, CI/CD</div>
-        </div>
+        <div class="step-container" onclick="toggleSidebar()">
+            <div class="step-description">DevOps та хмарні технології.</div>
+            <div class="step" onclick="toggleSelect(this)">Docker, Kubernetes, AWS, CI/CD</div>
 
-        <div class="step-container">
-            <div class="step" onclick="toggleSidebar()">Практика та працевлаштування</div>
-            <div class="step-description">Створення портфоліо (GitHub). Стажування, перша робота</div>
+        </div>
+            <div class="step-container" onclick="toggleSidebar()">
+                <div class="step-description">Практика та працевлаштування</div>
+                <div class="step" onclick="toggleSelect(this)">Створення портфоліо (GitHub). Стажування, перша робота</div>
 
         </div>
     </div>
@@ -74,18 +72,47 @@
                 <a href="https://source4.com" target="_blank">Источник 4</a>
             </li>
         </ul>
-        <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+        <button id="buttonBelow" class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
     </div>
 
     <script>
-          function toggleSidebar() {
-          const sidebar = document.querySelector('.sidebar');
-          sidebar.classList.toggle('open');
+        let greenCount = 0;
+        let lastOpenedButton = null;
+
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
         }
 
         function toggleSelect(element) {
             element.classList.toggle("selected");
+            lastOpenedButton = element;
         }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttonBelow = document.getElementById("buttonBelow");
+            buttonBelow.addEventListener("click", () => {
+                if (lastOpenedButton) {
+                    const activeStep = lastOpenedButton;
+                    if (activeStep.style.backgroundColor === "#778D45") {
+                        activeStep.style.backgroundColor = "";
+                        greenCount--;
+                    } else {
+                        activeStep.style.backgroundColor = "#778D45";
+                        greenCount++;
+                    }
+                    counterDisplay.textContent = greenCount;
+                }
+            });
+
+            submitButton.addEventListener("click", () => {
+                if (greenCount >= 3) {
+                    message.textContent = "Поздравляем! Вы прошли важные шаги на пути к профессии!";
+                } else {
+                    message.textContent = "Выберите хотя бы 3 шага, чтобы продолжить.";
+                }
+            });
+        });
     </script>
 
 </body>
