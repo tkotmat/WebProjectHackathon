@@ -12,7 +12,7 @@
     <header>
         <a href="index.html" class="back-button">Назад</a>
         <h1 class="title">Шлях Frontend- розробника</h1>
-        <button class="submit-button">Відправити заявку на консультацію</button>
+        <button id="buttonSumbit" class="submit-button">Відправити заявку на консультацію</button>
     </header>
 
     <div id="step" class="roadmap-container">
@@ -37,15 +37,15 @@
 
         </div>
 
-        <div class="step-container">
-            <div class="step-description" onclick="toggleSidebar()">Верстка проектів, хостинг, підключення реальних API.</div>
+        <div class="step-container" onclick="toggleSidebar()">
+            <div class="step-description">Верстка проектів, хостинг, підключення реальних API.</div>
             <div class="step" onclick="toggleSelect(this)">Створити портфоліо</div>
         </div>
 
         <div class="step-container" onclick="toggleSidebar()">
             <div class="step-description">Фріланс, стажування, open-source проекти. Робота в команді.</div>
             <div class="step" onclick="toggleSelect(this)">Отримати перший комерційний досвід</div>
-    </div>
+        </div>
 
 
         <div class="sidebar">
@@ -72,7 +72,7 @@
                     <a href="https://source4.com" target="_blank">Источник 4</a>
                 </li>
             </ul>
-            <button id="buttonBelow" class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+            <button id="buttonBelow" class="toggle-btn" onclick="toggleSidebar()">Вивчено</button>
         </div>
 
     <script>
@@ -89,30 +89,33 @@
             lastOpenedButton = element;
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
+        window.onload=function(){
             const buttonBelow = document.getElementById("buttonBelow");
-            buttonBelow.addEventListener("click", () => {
-                if (lastOpenedButton) {
-                    const activeStep = lastOpenedButton;
-                    if (activeStep.style.backgroundColor === "#778D45") {
-                        activeStep.style.backgroundColor = "";
-                        greenCount--;
-                    } else {
-                        activeStep.style.backgroundColor = "#778D45";
-                        greenCount++;
-                    }
-                    counterDisplay.textContent = greenCount;
-                }
-            });
+            const submitButton = document.getElementById("buttonSumbit");
+            buttonBelow.addEventListener("click", buttonBelowLogic);
+            submitButton.addEventListener("click", submitButtonLogic);
+        }
 
-            submitButton.addEventListener("click", () => {
-                if (greenCount >= 3) {
-                    message.textContent = "Поздравляем! Вы прошли важные шаги на пути к профессии!";
+        function buttonBelowLogic() {
+            if (lastOpenedButton) {
+                const activeStep = lastOpenedButton;
+                if (activeStep.style.backgroundColor === "#778D45") {
+                    activeStep.style.backgroundColor = "";
+                    greenCount--;
                 } else {
-                    message.textContent = "Выберите хотя бы 3 шага, чтобы продолжить.";
+                    activeStep.style.backgroundColor = "#778D45";
+                    greenCount++;
                 }
-            });
-        });
+            }
+        }
+  
+        function submitButtonLogic() {
+            if (greenCount >= 3) {
+                alert("Вітаємо! Ви пройшли важливі кроки на шляху до професії!");
+            } else {
+                alert("Виберіть хоча б 3 кроки, щоб продовжити.");
+            }
+        }
     </script>
 </body>
 </html>
