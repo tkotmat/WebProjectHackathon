@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX- дизайнер</title>
+    <link rel="stylesheet" href="~/css/profession4.css">
+    <link rel="stylesheet" href="~/css/СSS2.css">
+</head>
+
+<body>
+
+    <header>
+        <a href='@Url.Action("index", "Home")' button class="back-button">Назад </a><
+        <h1 class="title">Шлях UI/UX- дизайнера</h1>
+        <button id="buttonSumbit" class="submit-button">Надіслати заявку на роботу</button>
+    </header>
+
+    <div class="roadmap-container">
+
+        <div id="divContent1" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)" >Візуальна ієрархія</div>
+            <div class="step-description">
+                Колір, типографіка, розташування. Контраст, баланс, ритм.
+                Використання сіток (grid system).
+            </div>
+        </div>
+
+        <div id="divContent2" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step-description">
+                Аналіз поведінки, тестування макетів (Google Analytics, Hotjar,
+                A/B-тестування).
+            </div>
+            <div class="step" onclick="toggleSelect(this)">UX-дослідження</div>
+
+        </div>
+
+        <div id="divContent3" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step-description">
+                Figma, Adobe XD, Sketch – створення UI, прототипування, дизайн-системи.
+            </div>
+            <div class="step" onclick="toggleSelect(this)">Інструменти</div>
+
+
+        </div>
+
+        <div id="divContent4" class="step-container" onclick="toggleSidebar(this)">
+
+            <div class="step-description">Основи HTML, CSS, змінні, шрифти, кольорові схеми.</div>
+            <div class="step" onclick="toggleSelect(this)">Код для дизайнерів</div>
+        </div>
+        <div id="divContent5" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step-description">3-5 кейсів у Behance, Dribbble.</div>
+            <div class="step" onclick="toggleSelect(this)">Портфоліо</div>
+
+
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <h2 class="sidebar-title">Заголовок</h2>
+        <ul>
+            <li class="sidebar-item">
+                <h3 id="heading1"></h3>
+                <p id="Description1"></p>
+                <a id="link1" href="https://source1.com" target="_blank">Джерело</a>
+            </li>
+            <li class="sidebar-item">
+                <h3 id="heading2"></h3>
+                <p id="Description2"></p>
+                <a id="link2" href="https://source2.com" target="_blank">Джерело</a>
+            </li>
+            <li class="sidebar-item">
+                <h3 id="heading3"></h3>
+                <p id="Description3"></p>
+                <a id="link3" href="https://source3.com" target="_blank">Джерело</a>
+            </li>
+            <li class="sidebar-item">
+                <h3 id="heading4"></h3>
+                <p id="Description4"></p>
+                <a id="link4" href="https://source4.com" target="_blank">Джерело</a>
+            </li>
+        </ul>
+        <button id="buttonBelow" class="toggle-btn">Вивчине</button>
+    </div>
+
+    <script>
+        let greenCount = 0;
+        let lastOpenedButton = null;
+
+        function toggleSidebar(element) {
+            const sidebar = document.querySelector('.sidebar');
+            console.log("dwda");
+            sidebar.classList.toggle('open');
+            tect4(element);
+
+        }
+
+        function toggleSelect(element) {
+            element.classList.toggle("selected");
+            lastOpenedButton = element;
+        }
+
+        window.onload = function () {
+            const buttonBelow = document.getElementById("buttonBelow");
+            const submitButton = document.getElementById("buttonSumbit");
+            buttonBelow.addEventListener("click", buttonBelowLogic);
+            submitButton.addEventListener("click", submitButtonLogic);
+        }
+
+        function buttonBelowLogic() {
+            if (lastOpenedButton) {
+                const activeStep = lastOpenedButton;
+                if (activeStep.style.backgroundColor === "#778D45") {
+                    activeStep.style.backgroundColor = "";
+                    greenCount--;
+                } else {
+                    activeStep.style.backgroundColor = "#778D45";
+                    greenCount++;
+                }
+            }
+        }
+
+        function submitButtonLogic() {
+            if (greenCount >= 3) {
+                alert("Ми з вами зв'яжемось пізніше");
+            } else {
+                alert("Вивчіть хоча б 3 теми");
+            }
+        }
+    </script>
+    <script src="~/js/InfoPanelUpdatesUXUI.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend-розробник</title>
+    <link rel="stylesheet" href="~/css/profession2.css">
+    <link rel="stylesheet" href="~/css/СSS.css">
+</head>
+
+<body>
+
+    <header>
+        <a href='@Url.Action("index", "Home")' button class="back-button">Назад </a>
+        <h1 class="title">Шлях Backend-розробника</h1>
+        <button id="buttonSumbit" class="submit-button">Надіслати заявку на роботу</button>
+    </header>
+
+    <div class="roadmap-container">
+
+        <div id="divContent1" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">
+                Вивчення мови програмування
+            </div>
+            <div class="step-description">JavaScript (Node.js), Python, PHP, Java або C#</div>
+        </div>
+
+        <div id="divContent2" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">
+                Робота з базами даних
+            </div>
+            <div class="step-description">SQL (PostgreSQL, MySQL) або NoSQL (MongoDB, Firebase)</div>
+        </div>
+
+        <div id="divContent3" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">
+                Архітектура та серверні технології
+            </div>
+            <div class="step-description">MVC, REST API, GraphQL. Аутентифікація (JWT, OAuth)</div>
+
+        </div>
+
+        <div id="divContent4" class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">DevOps та хмарні технології</div>
+            <div class="step-description">Docker, Kubernetes, AWS, CI/CD</div>
+        </div>
+
+        <div id="divContent5"  class="step-container" onclick="toggleSidebar(this)">
+            <div class="step" onclick="toggleSelect(this)">Практика та працевлаштування</div>
+            <div class="step-description">Створення портфоліо (GitHub). Стажування, перша робота</div>
+
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <h2 class="sidebar-title">Заголовок</h2>
+        <ul>
+            <li class="sidebar-item">
+                <h3 id="heading1"></h3>
+                <p id="Description1"></p>
+                <a id="link1" href="https://source1.com" target="_blank">Джерело</a>
+            </li>
+            <li class="sidebar-item">
+                <h3 id="heading2"></h3>
+                <p id="Description2"></p>
+                <a id="link2" href="https://source2.com" target="_blank">Джерело</a>
+            </li>
+            <li class="sidebar-item">
+                <h3 id="heading3"></h3>
+                <p id="Description3"></p>
+                <a id="link3" href="https://source3.com" target="_blank">Джерело</a>
+            </li>
+            <li class="sidebar-item">
+                <h3 id="heading4"></h3>
+                <p id="Description4"></p>
+                <a id="link4" href="https://source4.com" target="_blank">Джерело</a>
+            </li>
+        </ul>
+        <button id="buttonBelow" class="toggle-btn">Вивчине</button>
+    </div>
+
+    <script>
+        let greenCount = 0;
+        let lastOpenedButton = null;
+
+        function toggleSidebar(element) {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+            tect(element);
+        }
+
+        function toggleSelect(element) {
+            element.classList.toggle("selected");
+            lastOpenedButton = element;
+        }
+
+        window.onload=function(){
+            const buttonBelow = document.getElementById("buttonBelow");
+            const submitButton = document.getElementById("buttonSumbit");
+            buttonBelow.addEventListener("click", buttonBelowLogic);
+            submitButton.addEventListener("click", submitButtonLogic);
+        }
+
+        function buttonBelowLogic() {
+            if (lastOpenedButton) {
+                const activeStep = lastOpenedButton;
+                if (activeStep.style.backgroundColor === "#778D45") {
+                    activeStep.style.backgroundColor = "";
+                    greenCount--;
+                } else {
+                    activeStep.style.backgroundColor = "#778D45";
+                    greenCount++;
+                }
+            }
+        }
+
+        function submitButtonLogic() {
+            if (greenCount >= 3) {
+                alert("Вітаємо! Ви пройшли важливі кроки на шляху до професії!");
+            } else {
+                alert("Виберіть хоча б 3 кроки, щоб продовжити.");
+            }
+        }
+    </script>
+
+    <script src="~/js/InfoPanelUpdatesBack.js"></script>
+</body>
+
+</html>

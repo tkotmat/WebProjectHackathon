@@ -1,8 +1,108 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html lang="ru">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miracle Jobs</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Miracle Jobs</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="#contacts">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="title">Знайди свою професію в ІТ</h2>
+
+        <section class="professions">
+            <div class="profession">
+                <img class="img" src="/png/front.jpg" alt="Frontend Developer">
+                <div class="info">
+                    <h3 class="profession-title">Frontend-розробник</h3>
+                    <br>
+                    <p>
+                        Створює зовнішній інтерфейс сайтів та веб-додатків. Відповідає за вигляд, інтерактивність та
+                        коректну роботу веб-сторінок на різних пристроях. Використовує HTML, CSS, JavaScript та сучасні
+                        фреймворки.
+                    </p>
+                </div>
+                <a href='@Url.Action("PageFrontEndMap", "Home")' class="btn">Шлях до професії</a>
+            </div>
+
+            <div class="profession">
+                <img class="img" src="~/png/back.png" alt="Backend Developer">
+                <div class="info">
+                    <h3 class="profession-title">Backend-розробник</h3>
+                    <br>
+                    <p>
+                        Розробляє логіку роботи сервера, баз даних та API, які забезпечують функціонування сайту. Працює
+                        з мовами програмування, такими як Python, PHP, Java, та базами даних MySQL або PostgreSQL.
+                    </p>
+                </div>
+                <a href='@Url.Action("PageBackEndMap", "Home")' class="btn">Шлях до професії</a>
+            </div>
+
+            <div class="profession">
+                <img class="img" src=" /png/HR.jpg" alt="HR Manager">
+                <div class="info">
+
+                    <h3 class="profession-title">HR-менеджер</h3>
+                    <br>
+                    <p>
+                        Шукає та адаптує нових спеціалістів, створює комфортну атмосферу у команді, проводить співбесіди
+                        та допомагає з розвитком персоналу. Відповідає за побудову сильної корпоративної культури.
+                    </p>
+                </div>
+                <a href='@Url.Action("PageHRMap", "Home")' class="btn">Шлях до професії</a>
+            </div>
+
+            <div class="profession">
+                <img class="img" src=" /png/UI.jpg" alt="UX/UI Designer">
+                <div class="info">
+                    <h3 class="profession-title">UX/UI Дизайнер</h3>
+                    <br>
+                    <p>
+                        Проектує інтерфейси, роблячи їх зручними, доступними та привабливими для користувачів.
+                        Використовує інструменти дизайну, такі як Figma, Adobe XD, та аналізує поведінку користувачів
+                        для покращення взаємодії.
+                    </p>
+                </div>
+                <a href='@Url.Action("PageUXUIDesignerMap", "Home")' class="btn">Шлях до професії</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <div class="footer-container">
+            <p class="team"><b>Розроблено командою Miracle Jobs</b></p>
+
+            <div class="developers">
+                <div class="backend">
+                    <p class="backend-title">Backend-розробники:</p>
+                    <div class="backend-names">
+                        <p>Глухинський Б.Б.</p>
+                        <p>Цуран В.І.</p>
+                    </div>
+                </div>
+
+                <div class="frontend">
+                    <p class="frontend-title">Frontend-розробники:</p>
+                    <div class="frontend-names">
+                        <p>Михайленко А.О.</p>
+                        <p>Ласкава В.К.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="contacts"><b>Контакти:</b> email@example.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>
