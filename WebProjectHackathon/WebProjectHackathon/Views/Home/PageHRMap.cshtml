@@ -61,24 +61,24 @@
         <h2 class="sidebar-title">Заголовок</h2>
         <ul>
             <li class="sidebar-item">
-                <h3 id="heading1">Название 1</h3>
-                <p id="Description1"> Описание для первого пункта. Это краткая информация о теме.</p>
-                <a id="link1" href="https://source1.com" target="_blank">Источник 1</a>
+                <h3 id="heading1"></h3>
+                <p id="Description1"></p>
+                <a id="link1" href="https://source1.com" target="_blank">Джерело</a>
             </li>
             <li class="sidebar-item">
-                <h3 id="heading2">Название 2</h3>
-                <p id="Description2">Описание для второго пункта. Краткая информация о втором пункте.</p>
-                <a id="link2" href="https://source2.com" target="_blank">Источник 2</a>
+                <h3 id="heading2"></h3>
+                <p id="Description2"></p>
+                <a id="link2" href="https://source2.com" target="_blank">Джерело</a>
             </li>
             <li class="sidebar-item">
-                <h3 id="heading3">Название 3</h3>
-                <p id="Description3">Описание для третьего пункта. Описание контекста этого пункта.</p>
-                <a id="link3" href="https://source3.com" target="_blank">Источник 3</a>
+                <h3 id="heading3"></h3>
+                <p id="Description3"></p>
+                <a id="link3" href="https://source3.com" target="_blank">Джерело</a>
             </li>
             <li class="sidebar-item">
-                <h3 id="heading4">Название 4</h3>
-                <p id="Description4">Описание для четвертого пункта. Это описание для последнего пункта.</p>
-                <a id="link4" href="https://source4.com" target="_blank">Источник 4</a>
+                <h3 id="heading4"></h3>
+                <p id="Description4"></p>
+                <a id="link4" href="https://source4.com" target="_blank">Джерело</a>
             </li>
         </ul>
         <button id="buttonBelow" class="toggle-btn">Вивчине</button>
@@ -91,7 +91,7 @@
         function toggleSidebar(element) {
             const sidebar = document.querySelector('.sidebar');
             sidebar.classList.toggle('open');
-            tect2(element);
+            HandlerHRUpdates(element);
 
         }
 
@@ -128,6 +128,6 @@
             }
         }
     </script>
-    <script src="~/js/InfoPanelUpdatesHR.js"></script>
+    <script src="~/js/InfoPanelUpdatesHR.js" asp-append-version="true"></script>
 </body>
 </html>

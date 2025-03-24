@@ -87,7 +87,7 @@
         function toggleSidebar(element) {
             const sidebar = document.querySelector('.sidebar');
             sidebar.classList.toggle('open');
-            tect(element);
+            HandlerBackUpdates(element);
         }
 
         function toggleSelect(element) {
@@ -124,7 +124,7 @@
         }
     </script>
 
-    <script src="~/js/InfoPanelUpdatesBack.js"></script>
+    <script src="~/js/InfoPanelUpdatesBack.js" asp-append-version="true"></script>
 </body>
 
 </html>

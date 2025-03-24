@@ -1,4 +1,4 @@
-﻿function tect1(element) {
+﻿function HandlerFrondUpdates(element) {
     let name1 = ["HTML та CSS", "JavaScript та DOM", "Основи Backend-розробки", "Контроль версій та розгортання"];
     let DescriptionAppays1 = ["Основи створення веб-сторінок: структура HTML-документів, основні теги та атрибути. Використання CSS для стилізації елементів, верстка сторінок та адаптивний дизайн.",
         "Основи мови програмування JavaScript: змінні, типи даних, функції, цикли та умови. Робота з DOM (Document Object Model), події та маніпуляція HTML-елементами.",

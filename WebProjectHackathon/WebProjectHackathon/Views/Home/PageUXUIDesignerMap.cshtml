@@ -93,8 +93,7 @@
             const sidebar = document.querySelector('.sidebar');
             console.log("dwda");
             sidebar.classList.toggle('open');
-            tect4(element);
-
+            HandlerUXUIUpdates(element);
         }
 
         function toggleSelect(element) {
@@ -130,7 +129,7 @@
             }
         }
     </script>
-    <script src="~/js/InfoPanelUpdatesUXUI.js"></script>
+    <script src="~/js/InfoPanelUpdatesUXUI.js" asp-append-version="true"></script>
 </body>
 
 </html>
