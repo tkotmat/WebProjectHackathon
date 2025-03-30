@@ -6,4 +6,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Views\PersonalityUserPages\Authorization.cshtml" />
+    <Content Remove="Views\PersonalityUserPages\PersonalOffice.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\PersonalityUserPages\Authorization.cshtml" />
+    <None Include="Views\PersonalityUserPages\PersonalOffice.cshtml" />
+    <None Include="Views\PersonalityUserPages\Registration.cshtml" />
+  </ItemGroup>
+
 </Project>

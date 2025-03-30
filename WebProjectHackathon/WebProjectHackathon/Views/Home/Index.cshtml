@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miracle Jobs</title>
-    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="~/css/stylesIndex.css">
 </head>
 
 <body>
     <header>
-        <h1>Miracle Jobs</h1>
+        <div class="logo-container">
+            <img src="../Images/LogoMiracleJobs.png" alt="Miracle Jobs Logo" class="logo">
+            <h1>Miracle Jobs</h1>
+        </div>
         <nav>
-            <a href="index.html">Головна</a>
+            <a href='@Url.Action("index", "Home")'>Головна</a>
+            <a href='@Url.Action("Registration", "PersonalityUserPages")'>Личный кабинет</a>
             <a href="#contacts">Контакти</a>
         </nav>
     </header>

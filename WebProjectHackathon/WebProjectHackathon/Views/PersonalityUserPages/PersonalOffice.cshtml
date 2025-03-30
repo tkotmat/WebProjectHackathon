@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/StylesCSS/StylesPersonalOffice/StylesPersonalOffice.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center p-3 shadow-sm bg-dark">
+        <div class="ms-3 d-flex align-items-center">
+            <img src="/Images/LogoMiracleJobs.png" alt="Логотип" style="height: 100px;">
+            <h2 class="ms-3 text-white">Miracle Jobs</h2>
+        </div>
+        <div class="me-3 d-flex align-items-center">
+            <a href="index.html" class="btn btn-primary">Главная</a>
+            <div class="btn-group ms-2">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Настройки профиля
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Изменить пароль</a></li>
+                    <li><a class="dropdown-item" href="#">Изменить email</a></li>
+                    <li><a class="dropdown-item" href="#">Удалить аккаунт</a></li>
+                    <li><a class="dropdown-item" href="#">Редактировать</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Бургер-меню -->
+        <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </header>
+
+    <!-- Боковое меню с выпадающим списком -->
+    <nav class="collapse d-md-none navbar navbar-expand-md navbar-dark bg-dark" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Профиль</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Настройки</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Выход</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main class="content container">
+        <div class="row">
+            <div class="col-md-6 position-relative">
+                <div class="profile-container profile-photo-container">
+                    <!-- Фото с рамкой в левом верхнем углу -->
+                    <div class="photo-wrapper">
+                        <div class="profile-photo">&#128100;</div>
+                    </div>
+                    <div class="profile-text">
+                        <h5 style="font-size: 30px;">Иван Иванов</h5>
+                        <p style="font-size: 20px;">Email: ivan@example.com</p>
+                        <p style="font-size: 20px;">Телефон: +7 900 123-45-67</p>
+                    </div>
+                    <div class="context-text">
+                        <h2>О Бо мне</h2>
+                        <p class="p-context-text"> e. Veniam assumenda ex placeat, quia, tempora, doloribus atque ratione pariatur illo harum dolores officia? Sint ducimus vitae minima adipisci officiis alias possimus, tempore, molestiae nam, exercitationem tenetur blanditiis asperiores unde veritatis quisquam voluptas cum illum ullam distinctio sunt quia hic! Vitae animi optio assumenda adipisci modi necessitatibus accusamus? Sequi vel ipsa totam repudiandae officiis aspernatur labore architecto culpa impedit odio quos, aperiam sint reiciendis! Illum delectus, deserunt blanditiis similique incidunt provident. Laudantium maiores quia provident dolores aliquam ab saepe dolore? Accusamus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-container mb-3" style="height: 392px;">
+                    <h1 style="font-size: 30px;">Cтатистика</h1>
+                    <h5>Количества прийдиных шагов: 10</h5>
+                    <h5>Количества прийдиных Професий: 1</h5>
+                    <h5>Количества окликов на вакансий: 1</h5>
+                </div>
+                <div class="profile-container" style="height: 392px;">
+                    <h1 style="font-size: 30px;">Контакти людей</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

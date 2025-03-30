@@ -20,6 +20,7 @@ header {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 h1 {
     margin-left: 50px;
 }
@@ -132,6 +133,18 @@ nav a {
     flex-direction: column;
     text-align: left;
 }
+
 .img {
     border-radius: 15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 90px; /* Размер логотипа */
+    height: auto;
+    margin-right: -35px; /* Уменьшенный отступ между логотипом и названием */
 }

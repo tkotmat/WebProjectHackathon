@@ -2,8 +2,6 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using WebProjectHackathon.Models;
 
-namespace WebProjectHackathon.Controllers;
-
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _Intex;
