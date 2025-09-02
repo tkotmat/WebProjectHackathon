@@ -1,5 +1,6 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+using WebProjectHackathon.BusinessLogic.Service;
 using WebProjectHackathon.Models;
 
 namespace WebProjectHackathon.Controllers;
@@ -7,15 +8,18 @@ namespace WebProjectHackathon.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _Intex;
+    private readonly IProfessionsService _service;
 
-    public HomeController(ILogger<HomeController> intex)
+    public HomeController(ILogger<HomeController> intex, IProfessionsService service)
     {
         _Intex = intex;
+        _service = service;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> IndexAsync()
     {
-        return View();
+        List<ProfessionModel> professions = await _service.GetAllProfessions();
+        return View(professions);
     }
 
     public IActionResult PageHRMap()

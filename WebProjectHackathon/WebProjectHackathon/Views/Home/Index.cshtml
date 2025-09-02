@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model List<WebProjectHackathon.Models.ProfessionModel>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -24,13 +25,9 @@
             <div class="profession">
                 <img class="img" src="/png/front.jpg" alt="Frontend Developer">
                 <div class="info">
-                    <h3 class="profession-title">Frontend-розробник</h3>
+                    <h3 class="profession-title">@Model[0].Title</h3>
                     <br>
-                    <p>
-                        Створює зовнішній інтерфейс сайтів та веб-додатків. Відповідає за вигляд, інтерактивність та
-                        коректну роботу веб-сторінок на різних пристроях. Використовує HTML, CSS, JavaScript та сучасні
-                        фреймворки.
-                    </p>
+                    <p>@Model[0].Description</p>
                 </div>
                 <a href='@Url.Action("PageFrondEndMap", "Home")' class="btn">Шлях до професії</a>
             </div>
@@ -38,12 +35,9 @@
             <div class="profession">
                 <img class="img" src="~/png/back.png" alt="Backend Developer">
                 <div class="info">
-                    <h3 class="profession-title">Backend-розробник</h3>
+                    <h3 class="profession-title">@Model[1].Title</h3>
                     <br>
-                    <p>
-                        Розробляє логіку роботи сервера, баз даних та API, які забезпечують функціонування сайту. Працює
-                        з мовами програмування, такими як Python, PHP, Java, та базами даних MySQL або PostgreSQL.
-                    </p>
+                    <p>@Model[1].Description</p>
                 </div>
                 <a href='@Url.Action("PageBackEndMap", "Home")' class="btn">Шлях до професії</a>
             </div>
@@ -52,12 +46,9 @@
                 <img class="img" src=" /png/HR.jpg" alt="HR Manager">
                 <div class="info">
 
-                    <h3 class="profession-title">HR-менеджер</h3>
+                    <h3 class="profession-title">@Model[2].Title</h3>
                     <br>
-                    <p>
-                        Шукає та адаптує нових спеціалістів, створює комфортну атмосферу у команді, проводить співбесіди
-                        та допомагає з розвитком персоналу. Відповідає за побудову сильної корпоративної культури.
-                    </p>
+                    <p>@Model[2].Description</p>
                 </div>
                 <a href='@Url.Action("PageHRMap", "Home")' class="btn">Шлях до професії</a>
             </div>
@@ -65,13 +56,9 @@
             <div class="profession">
                 <img class="img" src=" /png/UI.jpg" alt="UX/UI Designer">
                 <div class="info">
-                    <h3 class="profession-title">UX/UI Дизайнер</h3>
+                    <h3 class="profession-title">@Model[3].Title</h3>
                     <br>
-                    <p>
-                        Проектує інтерфейси, роблячи їх зручними, доступними та привабливими для користувачів.
-                        Використовує інструменти дизайну, такі як Figma, Adobe XD, та аналізує поведінку користувачів
-                        для покращення взаємодії.
-                    </p>
+                    <p>@Model[3].Description</p>
                 </div>
                 <a href='@Url.Action("PageUXUIDesignerMap", "Home")' class="btn">Шлях до професії</a>
             </div>
