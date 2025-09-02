@@ -12,7 +12,11 @@ namespace WebProjectHackathon.DataAccess.Entity
 
         [Required]
         public string Description { get; set; } = string.Empty;
+        
+        public int IdContextPagesInfo { get; set; }
+        
+        public CircleContextPagesInfoEntity? CircleContextPagesInfo { get; set; }
 
-        public MainPanelContextEntity? mainPanelContextEntity;
+        public List<MainPanelContextEntity> mainPanelContextEntity { get; set; } = new List<MainPanelContextEntity>(); 
     }
 }

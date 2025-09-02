@@ -10,5 +10,7 @@ namespace WebProjectHackathon.DataAccess.Entity
         public string Title { get; set; } = string.Empty;
         [Required]
         public string Description { get; set; } = string.Empty;
+        
+        public List<CircleContextPagesInfoEntity>  CircleContextPagesInfo { get; set; } = new List<CircleContextPagesInfoEntity>();
     }
 }
