@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using WebProjectHackathon.BusinessLogic.Models
+@model List<TitleModelCircle>
+<!DOCTYPE html>
 <html lang="uk">
 
 <head>
@@ -10,124 +12,49 @@
 </head>
 
 <body>
-
     <header>
-        <a href='@Url.Action("index", "Home")' button class="back-button">Назад </a>
+        <a href='@Url.Action("index", "Home")' class="back-button">Назад</a>
         <h1 class="title">Шлях HR-менеджера</h1>
         <button id="buttonSumbit" class="submit-button">Надіслати заявку на роботу</button>
     </header>
 
     <div class="roadmap-container">
-
-        <div id="divContent1" class="step-container" onclick="toggleSidebar(this)">
-            <div class="step-description">Вивчення теорії</div>
-            <div class="step" onclick="toggleSelect(this)">Менеджмент, психологія, HR-курси</div>
-        </div>
-
-        <div id="divContent2" class="step-container" onclick="toggleSidebar(this)">
-            <div class="step-description">LinkedIn, Work.ua, Djinni, ATS-системи (Workable, Greenhouse)</div>
-            <div class="step" onclick="toggleSelect(this)">
-                Освоєння
-                <br>
-                HR-інструментів
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <div id="divContent@(i + 1)" class="step-container" onclick="toggleSidebar(this)">
+                <div class="step-description">@Model[i].Description</div>
+                <div class="step" onclick="toggleSelect(this)">@Model[i].Title</div>
             </div>
-
-        </div>
-
-        <div id="divContent3" class="step-container" onclick="toggleSidebar(this)">
-            <div class="step-description">
-                Проведення співбесід
-                <br>
-                Робота з конфліктами
-            </div>
-            <div class="step" onclick="toggleSelect(this)">Розвиток комунікаційних навичок</div>
-
-
-        </div>
-
-        <div id="divContent4" class="step-container" onclick="toggleSidebar(this)">
-
-            <div class="step-description">Оформлення документів</div>
-            <div class="step" onclick="toggleSelect(this)">Знання трудового законодавства</div>
-        </div>
-
-        <div id="divContent5" class="step-container" onclick="toggleSidebar(this)">
-            <div class="step-description">Стажування у HR-відділі</div>
-            <div class="step" onclick="toggleSelect(this)">Практика та працевлаштуванняо</div>
-        </div>
+        }
     </div>
 
     <div class="sidebar">
         <h2 class="sidebar-title">Заголовок</h2>
         <ul>
-            <li class="sidebar-item">
-                <h3 id="heading1"></h3>
-                <p id="Description1"></p>
-                <a id="link1" href="https://source1.com" target="_blank">Джерело</a>
-            </li>
-            <li class="sidebar-item">
-                <h3 id="heading2"></h3>
-                <p id="Description2"></p>
-                <a id="link2" href="https://source2.com" target="_blank">Джерело</a>
-            </li>
-            <li class="sidebar-item">
-                <h3 id="heading3"></h3>
-                <p id="Description3"></p>
-                <a id="link3" href="https://source3.com" target="_blank">Джерело</a>
-            </li>
-            <li class="sidebar-item">
-                <h3 id="heading4"></h3>
-                <p id="Description4"></p>
-                <a id="link4" href="https://source4.com" target="_blank">Джерело</a>
-            </li>
+            @for (int i = 0; i < 4; i++)
+            {
+                <li class="sidebar-item">
+                    <h3 id="heading@(i + 1)"></h3>
+                    <p id="Description@(i + 1)"></p>
+                    <a id="link@(i + 1)" href="#" target="_blank">Джерело</a>
+                </li>
+            }
         </ul>
         <button id="buttonBelow" class="toggle-btn">Вивчине</button>
     </div>
 
     <script>
-        let greenCount = 0;
-        let lastOpenedButton = null;
-
-        function toggleSidebar(element) {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.classList.toggle('open');
-            HandlerHRUpdates(element);
-
-        }
-
-        function toggleSelect(element) {
-            element.classList.toggle("selected");
-            lastOpenedButton = element;
-        }
-
-        window.onload = function () {
-            const buttonBelow = document.getElementById("buttonBelow");
-            const submitButton = document.getElementById("buttonSumbit");
-            buttonBelow.addEventListener("click", buttonBelowLogic);
-            submitButton.addEventListener("click", submitButtonLogic);
-        }
-
-        function buttonBelowLogic() {
-            if (lastOpenedButton) {
-                const activeStep = lastOpenedButton;
-                if (activeStep.style.backgroundColor === "#778D45") {
-                    activeStep.style.backgroundColor = "";
-                    greenCount--;
-                } else {
-                    activeStep.style.backgroundColor = "#778D45";
-                    greenCount++;
-                }
+        const circlePanels = [
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                    <text>{
+                        panels: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model[i].Panels.Select(p => new { p.Title, Content = p.Content, p.ImageUrl })))
+                    }@((i < Model.Count - 1) ? "," : "")
+                    </text>
             }
-        }
-
-        function submitButtonLogic() {
-            if (greenCount >= 3) {
-                alert("Ми з вами зв'яжемось пізніше");
-            } else {
-                alert("Вивчіть хоча б 3 теми");
-            }
-        }
+        ];
     </script>
-    <script src="~/js/InfoPanelUpdatesHR.js" asp-append-version="true"></script>
+
+    <script src="~/js/LogicJsFile.js" asp-append-version="true"></script>
 </body>
 </html>

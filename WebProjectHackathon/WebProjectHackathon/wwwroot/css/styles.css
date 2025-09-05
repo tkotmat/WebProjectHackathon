@@ -19,9 +19,12 @@ header {
     align-items: center;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    height: 80px;
+    box-sizing: border-box;
 }
+
 h1 {
-    margin-left: 50px;
+    margin-left: 15px;
 }
 
 nav a {
@@ -33,9 +36,9 @@ nav a {
     font-size: 20px;
 }
 
-    nav a:hover {
-        text-decoration: underline;
-    }
+nav a:hover {
+    text-decoration: underline;
+}
 
 .title {
     margin: 40px 0;
@@ -62,13 +65,13 @@ nav a {
     transition: 0.3s;
 }
 
-    .profession:hover {
-        transform: scale(1.05);
-    }
+.profession:hover {
+    transform: scale(1.05);
+}
 
-    .profession img {
-        width: 120px;
-    }
+.profession img {
+    width: 120px;
+}
 
 .info {
     text-align: left;
@@ -85,10 +88,10 @@ nav a {
     transition: 0.3s;
 }
 
-    .btn:hover {
-        background: rgba(0, 255, 200, 1);
-        transform: scale(1.1);
-    }
+.btn:hover {
+    background: rgba(0, 255, 200, 1);
+    transform: scale(1.1);
+}
 
 .footer-container {
     display: flex;
@@ -101,15 +104,12 @@ nav a {
     margin-left: 150px;
 }
 
-/* Контейнер для двох колонок */
 .developers {
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    /* Відступ між колонками */
 }
 
-/* Оформлення колонок */
 .backend,
 .frontend {
     display: flex;
@@ -117,7 +117,6 @@ nav a {
     align-items: flex-start;
 }
 
-/* Заголовки */
 .backend-title,
 .frontend-title {
     font-weight: bold;
@@ -125,7 +124,6 @@ nav a {
     margin-bottom: 5px;
 }
 
-/* Прізвища у стовпчик */
 .backend-names,
 .frontend-names {
     display: flex;

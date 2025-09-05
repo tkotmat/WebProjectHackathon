@@ -1,4 +1,4 @@
-namespace WebProjectHackathon.Models
+namespace WebProjectHackathon.BusinessLogic.Models
 {
     public class ErrorViewModel
     {

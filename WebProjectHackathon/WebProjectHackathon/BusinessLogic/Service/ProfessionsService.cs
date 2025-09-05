@@ -1,5 +1,5 @@
-﻿using WebProjectHackathon.DataAccess.Repository;
-using WebProjectHackathon.Models;
+﻿using WebProjectHackathon.BusinessLogic.Models;
+using WebProjectHackathon.DataAccess.Repository;
 
 namespace WebProjectHackathon.BusinessLogic.Service
 {

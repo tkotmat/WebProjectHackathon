@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Data;
+using WebProjectHackathon.DataAccess.Configure;
 using WebProjectHackathon.DataAccess.Entity;
 
 public class DatabaseContext : Microsoft.EntityFrameworkCore.DbContext
@@ -12,7 +12,12 @@ public class DatabaseContext : Microsoft.EntityFrameworkCore.DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfiguration(new ContextHomePagesConfiguration());
+        modelBuilder.ApplyConfiguration(new CircleContextPagesInfoConfiguration());
+        modelBuilder.ApplyConfiguration(new MainPanelContextConfiguration());
+
         DataSet.Seed(modelBuilder);
+
+        base.OnModelCreating(modelBuilder);
     }
 }

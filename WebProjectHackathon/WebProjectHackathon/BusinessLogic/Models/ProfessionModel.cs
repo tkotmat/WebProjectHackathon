@@ -1,7 +1,4 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-
-namespace WebProjectHackathon.Models
+﻿namespace WebProjectHackathon.BusinessLogic.Models
 {
     public class ProfessionModel
     {

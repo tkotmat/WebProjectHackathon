@@ -14,10 +14,18 @@ namespace WebProjectHackathon.DataAccess.Repository
         {
             return await _context.ContextHomePages.ToListAsync();
         }
+
+        public async Task<List<int>> GetAllIds()
+        {
+            return await _context.ContextHomePages
+                .Select(p => p.Id)
+                .ToListAsync();
+        }
     }
 
     public interface IProfessionsRepository
     {
         public Task<List<ContextHomePagesEntity>> GetAllProfessions();
+        public Task<List<int>> GetAllIds();
     }
 }

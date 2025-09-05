@@ -18,7 +18,6 @@ body {
     overflow-x: hidden !important;
 }
 
-/* Шапка */
 header {
     width: 100%;
     padding: 20px;
@@ -53,7 +52,6 @@ header {
     margin-left: 20px;
 }
 
-/* Контейнер с roadmap */
 .roadmap-container {
     margin-top: 80px;
     display: flex;
@@ -72,9 +70,9 @@ header {
     margin: 30px 0;
 }
 
-    .step-container:nth-child(even) {
-        flex-direction: row-reverse;
-    }
+.step-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
 
 .step {
     position: relative;
@@ -96,14 +94,11 @@ header {
     font-size: 15px;
 }
 
-    .step:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
-    }
+.step:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+}
 
-
-
-/* Описание слева от кружков */
 .step-description {
     background: rgba(255, 255, 255, 0.2);
     padding: 15px;
@@ -113,7 +108,6 @@ header {
     text-align: left;
 }
 
-/* Кнопка отправки */
 .submit-button {
     background: rgba(255, 255, 255, 0.2);
     padding: 15px 30px;
@@ -128,5 +122,5 @@ header {
     margin-left: auto;
 }
 .submit-button:hover {
-        background: #850473;
+    background: #850473;
 }

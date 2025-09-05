@@ -1,0 +1,24 @@
+# fly.toml app configuration file generated for miracle-jobs-it-education on 2025-09-03T23:37:50+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'miracle-jobs-it-education'
+primary_region = 'otp'
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  size = 'shared-cpu-1x'
+
+[[mounts]]
+  source = "hackathon_database"
+  destination = "/app/DataAccess/Root/Database"

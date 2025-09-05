@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using WebProjectHackathon.BusinessLogic.Models;
 using WebProjectHackathon.BusinessLogic.Service;
-using WebProjectHackathon.Models;
 
 namespace WebProjectHackathon.Controllers;
 
@@ -9,11 +9,13 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _Intex;
     private readonly IProfessionsService _service;
+    private readonly IProcessThePageDataService _processThePageDataService;
 
-    public HomeController(ILogger<HomeController> intex, IProfessionsService service)
+    public HomeController(ILogger<HomeController> intex, IProfessionsService service, IProcessThePageDataService processThePageDataService)
     {
         _Intex = intex;
         _service = service;
+        _processThePageDataService = processThePageDataService;
     }
 
     public async Task<IActionResult> IndexAsync()
@@ -22,24 +24,28 @@ public class HomeController : Controller
         return View(professions);
     }
 
-    public IActionResult PageHRMap()
+    public async Task<IActionResult> PageHRMapAsync()
     {
-        return View();
+        List<TitleModelCircle> titleModelCircles = await _processThePageDataService.GetDataForThePage("HR");
+        return View(titleModelCircles);
     }
 
-    public IActionResult PageBackEndMap()
+    public async Task<IActionResult> PageBackEndMapAsync()
     {
-        return View();
+        List<TitleModelCircle> titleModelCircles = await _processThePageDataService.GetDataForThePage("backend");
+        return View(titleModelCircles);
     }
 
-    public IActionResult PageFrondEndMap()
+    public async Task<IActionResult> PageFrondEndMapAsync()
     {
-        return View();
+        List<TitleModelCircle> titleModelCircles = await _processThePageDataService.GetDataForThePage("frondend");
+        return View(titleModelCircles);
     }
 
-    public IActionResult PageUXUIDesignerMap()
+    public async Task<IActionResult> PageUXUIDesignerMapAsync()
     {
-        return View();
+        List<TitleModelCircle> titleModelCircles = await _processThePageDataService.GetDataForThePage("uxui");
+        return View(titleModelCircles);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

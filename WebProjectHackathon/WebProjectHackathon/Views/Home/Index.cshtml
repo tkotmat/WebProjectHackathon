@@ -1,4 +1,5 @@
-﻿@model List<WebProjectHackathon.Models.ProfessionModel>
+﻿@using WebProjectHackathon.BusinessLogic.Models
+@model List<ProfessionModel>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -11,9 +12,11 @@
 
 <body>
     <header>
-        <h1>Miracle Jobs</h1>
+        <div>
+            <h1>Miracle Jobs</h1>
+        </div>
         <nav>
-            <a href="index.html">Головна</a>
+            <a href="@Url.Action("index", "Home")">Головна</a>
             <a href="#contacts">Контакти</a>
         </nav>
     </header>
@@ -73,21 +76,19 @@
                 <div class="backend">
                     <p class="backend-title">Backend-розробники:</p>
                     <div class="backend-names">
-                        <p>Глухінський Б.Б.</p>
-                        <p>Цуркан В.І.</p>
+                        <p>Глухінський Борис.</p>
+                        <p>Цуркан Віталій.</p>
                     </div>
                 </div>
 
                 <div class="frontend">
                     <p class="frontend-title">Frontend-розробники:</p>
                     <div class="frontend-names">
-                        <p>Михайленко А.О.</p>
-                        <p>Ласкава В.К.</p>
+                        <p>Михайленко Аліна.</p>
+                        <p>Ласкава Вікторія.</p>
                     </div>
                 </div>
             </div>
-
-            <p class="contacts"><b>Контакти:</b> email@example.com</p>
         </div>
     </footer>
 </body>
