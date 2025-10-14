@@ -1,68 +1,68 @@
 # Miracle Jobs 🎯
 
-Веб-платформа для спрощення пошуку професії в IT-сфері з інтуїтивним інтерфейсом та детальними roadmap для різних спеціальностей.
+A web platform for simplifying IT career search with an intuitive interface and detailed roadmaps for various specializations.
 
-## 📋 Про проект
+## 📋 About the Project
 
-**Miracle Jobs** — це хакатон-проект, створений командою з 4 розробників для полегшення вибору професії в IT-галузі. Платформа має мінімалістичний дизайн та зрозумілий користувацький інтерфейс, що допомагає користувачам визначитися з кар'єрним шляхом.
+**Miracle Jobs** is a hackathon project created by a team of 4 developers to facilitate career choice in the IT industry. The platform features a minimalist design and user-friendly interface that helps users determine their career path.
 
-🌐 **Переглянути веб-додаток**: [https://your-app-url.com](https://miracle-jobs-it-education.fly.dev/)
+🌐 **View Web Application**: [https://miracle-jobs-it-education.fly.dev/](https://miracle-jobs-it-education.fly.dev/)
 
-🏆 **Результат хакатону**: **10 місце з 20 команд**
+🏆 **Hackathon Result**: **10th place out of 20 teams**
 
-> 💡 Проект розроблено в рамках хакатону за обмежений термін командою з двох backend та двох frontend розробників.
+> 💡 The project was developed during a hackathon within a limited timeframe by a team of two backend and two frontend developers.
 
-## ✨ Основні функції
+## ✨ Key Features
 
-- 🎨 Огляд популярних IT-професій
-- 🗺️ Інтерактивні roadmap для кожної професії
-- 📚 Детальні описи етапів навчання з ресурсами
-- 💼 Можливість подати заявку на роботу
-- 📱 Адаптивний дизайн для всіх пристроїв
+- 🎨 Overview of popular IT professions
+- 🗺️ Interactive roadmaps for each profession
+- 📚 Detailed descriptions of learning stages with resources
+- 💼 Job application functionality
+- 📱 Responsive design for all devices
 
-## 🚀 Професії в платформі
+## 🚀 Professions on the Platform
 
-- **Frontend Developer** — розробка клієнтської частини веб-додатків
-- **Backend Developer** — серверна розробка та робота з базами даних
-- **HR Manager** — управління персоналом в IT-компаніях
-- **UX/UI Designer** — проєктування інтерфейсів та користувацького досвіду
+- **Frontend Developer** — development of client-side web applications
+- **Backend Developer** — server-side development and database work
+- **HR Manager** — personnel management in IT companies
+- **UX/UI Designer** — interface design and user experience
 
-## 🛠️ Технологічний стек
+## 🛠️ Technology Stack
 
 - **Backend**: ASP.NET Core MVC
 - **Frontend**: HTML5, CSS3, JavaScript
 - **View Engine**: Razor
 - **Architecture**: MVC Pattern
 
-## 💡 Як працює додаток
+## 💡 How the Application Works
 
-1. На головній сторінці користувач обирає цікаву професію
-2. Переходить до інтерактивної roadmap з етапами навчання
-3. Клікає на кожен етап для перегляду детальної інформації та ресурсів
-4. Відмічає вивчені теми
-5. Може подати заявку на роботу
+1. On the main page, the user selects a profession of interest
+2. Proceeds to an interactive roadmap with learning stages
+3. Clicks on each stage to view detailed information and resources
+4. Marks completed topics
+5. Can submit a job application
 
-## 👥 Команда розробників
+## 👥 Development Team
 
-Проект створено командою з **4 розробників** в рамках хакатону:
+The project was created by a team of **4 developers** during the hackathon:
 
-### Backend-розробники:
-- **Глухінський Борис** 💻
-- **Цуркан Віталій** 💻
+### Backend Developers:
+- **Borys Hlukhinsky** 💻
+- **Vitaliy Tsurkan** 💻
 
-### Frontend-розробники:
-- **Михайленко Аліна** 🎨
-- **Ласкава Вікторія** 🎨
+### Frontend Developers:
+- **Alina Mykhailenko** 🎨
+- **Viktoria Laskava** 🎨
 
-## 🏆 Результати хакатону
+## 🏆 Hackathon Results
 
-✅ Проект успішно реалізований за обмежений термін  
-✅ Зайняли **10 місце з 20 команд**  
-✅ Повна функціональність та привабливий інтерфейс  
-✅ Готовий до використання веб-додаток
+✅ Project successfully implemented within a limited timeframe  
+✅ Secured **10th place out of 20 teams**  
+✅ Full functionality and attractive interface  
+✅ Ready-to-use web application
 
 ---
 
-**Miracle Jobs** — Твій шлях до успіху в IT! ✨
+**Miracle Jobs** — Your path to success in IT! ✨
 
-*Розроблено командою Miracle Jobs в рамках хакатону 2024*
+*Developed by the Miracle Jobs team during the 2024 hackathon*
